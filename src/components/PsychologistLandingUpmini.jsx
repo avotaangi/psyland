@@ -3858,6 +3858,57 @@ export default function PsychologistLandingUpmini() {
                 }
                 desc="Полный доступ ко всем функциям. Без ограничений. Стоимость меньше 1 вашей консультации."
               />
+              <div
+                className="mt-4 relative overflow-hidden rounded-3xl border p-4"
+                style={{
+                  background: "linear-gradient(rgba(19, 39, 63, 0.15), rgba(19, 39, 63, 0.1))",
+                  borderColor: "rgba(19, 39, 63, 0.14)",
+                  boxShadow: "rgba(19, 39, 63, 0.14) 0px 28px 90px",
+                  backdropFilter: "blur(18px)",
+                  WebkitBackdropFilter: "blur(18px)",
+                }}
+              >
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-60"
+                  style={{
+                    background:
+                      "radial-gradient(560px 300px at 16% 10%, rgba(107, 114, 128, 0.48), transparent 58%), radial-gradient(460px 280px at 84% 20%, rgba(19, 39, 63, 0.52), transparent 58%), radial-gradient(420px 260px at 54% 86%, rgba(55, 65, 81, 0.4), transparent 58%)",
+                  }}
+                />
+                <div
+                  className="pointer-events-none absolute inset-[1px] rounded-[22px]"
+                  style={{
+                    border: "1px solid rgba(19, 39, 63, 0.3)",
+                    opacity: 0.5,
+                  }}
+                />
+                <div className="relative text-xs font-semibold" style={{ color: "rgba(19, 39, 63, 0.95)" }}>
+                  Подписка
+                </div>
+                <div className="relative mt-3 space-y-2">
+                  <div className="rounded-xl border px-3 py-2 flex items-center justify-between gap-2" style={{ borderColor: "rgba(19, 39, 63, 0.14)", background: "rgba(255,255,255,0.65)" }}>
+                    <div className="text-[11px] font-medium" style={{ color: "rgba(19, 39, 63, 0.85)" }}>1 месяц</div>
+                    <div className="text-right">
+                      <div className="text-[12px] font-semibold" style={{ color: "#13273F" }}>1890 ₽/мес</div>
+                      <div className="text-[10px]" style={{ color: "rgba(19, 39, 63, 0.65)" }}>1890 ₽ за период</div>
+                    </div>
+                  </div>
+                  <div className="rounded-xl border px-3 py-2 flex items-center justify-between gap-2" style={{ borderColor: "rgba(19, 39, 63, 0.14)", background: "rgba(255,255,255,0.65)" }}>
+                    <div className="text-[11px] font-medium" style={{ color: "rgba(19, 39, 63, 0.85)" }}>3 месяца (+1 при рекомендации по реферальной ссылке)</div>
+                    <div className="text-right">
+                      <div className="text-[12px] font-semibold" style={{ color: "#13273F" }}>1790 ₽/мес</div>
+                      <div className="text-[10px]" style={{ color: "rgba(19, 39, 63, 0.65)" }}>5370 ₽ за период</div>
+                    </div>
+                  </div>
+                  <div className="rounded-xl border px-3 py-2 flex items-center justify-between gap-2" style={{ borderColor: "rgba(19, 39, 63, 0.14)", background: "rgba(255,255,255,0.65)" }}>
+                    <div className="text-[11px] font-medium" style={{ color: "rgba(19, 39, 63, 0.85)" }}>12 месяцев</div>
+                    <div className="text-right">
+                      <div className="text-[12px] font-semibold" style={{ color: "#13273F" }}>1490 ₽/мес</div>
+                      <div className="text-[10px]" style={{ color: "rgba(19, 39, 63, 0.65)" }}>17880 ₽ за период</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="lg:col-span-7 relative">
@@ -3998,7 +4049,7 @@ export default function PsychologistLandingUpmini() {
 
                 <div className="mt-6 flex flex-col sm:flex-row gap-3">
                   <PrimaryButton onClick={() => scrollToId("cta")}>Попробовать бесплатно</PrimaryButton>
-                  <GhostButton onClick={() => scrollToId("faq")}>Вопросы и ответы</GhostButton>
+                  <GhostButton onClick={() => scrollToId("faq")}>Приобрести тариф</GhostButton>
                 </div>
               </GlassCard>
             </div>
