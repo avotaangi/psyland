@@ -303,7 +303,7 @@ function TelegramReminderMessage() {
       <div
         className="relative p-2"
         style={{
-          background: "rgba(19, 39, 63, 0.1)",
+          background: "#FFFFFF",
           minHeight: "100%",
           paddingTop: "1.5rem",
           fontSize: "0.7rem",
@@ -313,7 +313,7 @@ function TelegramReminderMessage() {
         <div
           className="flex items-center justify-between px-1.5 py-1 border-b mb-1.5"
           style={{
-            background: "rgba(19, 39, 63, 0.1)",
+            background: "#FFFFFF",
             borderColor: "rgba(0, 0, 0, 0.08)",
           }}
         >
@@ -442,7 +442,7 @@ function TelegramReminderMessage() {
         <div
           className="absolute bottom-0 left-0 right-0 px-1.5 py-1 border-t"
           style={{
-            background: "rgba(19, 39, 63, 0.1)",
+            background: "#FFFFFF",
             borderColor: "rgba(0, 0, 0, 0.08)",
           }}
         >
@@ -583,13 +583,7 @@ function MiniAppScreenshot({ type }) {
     );
   } else if (type === "client") {
     return (
-      <div
-        className="relative overflow-hidden rounded-3xl border"
-        style={{
-          background: "#FFFFFF",
-          borderColor: "rgba(19, 39, 63, 0.1)",
-        }}
-      >
+      <div className="relative overflow-hidden rounded-3xl">
         <div className="relative flex items-center md:items-stretch justify-center md:justify-start p-4">
           <div className="w-full max-w-4xl">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
@@ -643,20 +637,20 @@ function MiniAppScreenshot({ type }) {
                   </div>
                   <div className="text-xs font-semibold" style={{ color: PALETTE.text }}>Оплата при записи</div>
                 </div>
-                <div className="border p-3 flex-1 flex flex-col" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.1)", background: "#13273F" }}>
-                  <div className="flex items-center justify-between mb-2">
+                <div className="border p-3 flex-1 flex flex-col justify-center" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.1)", background: "#13273F" }}>
+                  <div className="flex items-center justify-between">
                     <div>
                       <div className="text-[10px] mb-0.5" style={{ color: "rgba(255,255,255,0.6)" }}>Сумма к оплате</div>
                       <div className="text-xl font-semibold" style={{ color: "#FFFFFF" }}>3 500 ₽</div>
                     </div>
-                    <div className="px-2 py-1 rounded-lg" style={{ background: "rgba(19, 39, 63, 0.1)" }}>
-                      <div className="text-[10px] font-semibold" style={{ color: "#13273F" }}>Оплачено</div>
+                    <div className="flex items-center gap-2">
+                      <div className="px-2 py-1 rounded-lg" style={{ background: "rgba(19, 39, 63, 0.1)" }}>
+                        <div className="text-[10px] font-semibold" style={{ color: "#13273F" }}>Оплачено</div>
+                      </div>
+                      <button className="py-1.5 px-3 rounded-lg text-xs font-medium whitespace-nowrap" style={{ background: "#FFFFFF", color: "#13273F" }}>
+                        Оплатить картой
+                      </button>
                     </div>
-                  </div>
-                  <div className="flex gap-2 mt-auto">
-                    <button className="flex-1 py-1.5 px-3 rounded-lg text-xs font-medium" style={{ background: "#FFFFFF", color: "#13273F" }}>
-                      Оплатить картой
-                    </button>
                   </div>
                 </div>
               </div>
@@ -669,8 +663,8 @@ function MiniAppScreenshot({ type }) {
                   </div>
                   <div className="text-xs font-semibold" style={{ color: PALETTE.text }}>Автоматическое напоминание</div>
                 </div>
-                <div className="border p-3 flex-1 flex flex-col justify-between" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.1)", background: "#13273F" }}>
-                  <div className="flex items-center gap-2 mb-2">
+                <div className="border p-3 flex-1 flex flex-col justify-center" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.1)", background: "#13273F" }}>
+                  <div className="flex items-center gap-2">
                     <div className="h-8 w-8 rounded-full border flex items-center justify-center shrink-0" style={{ borderColor: "rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.1)" }}>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "#FFFFFF" }}>
                         <circle cx="12" cy="12" r="10"></circle>
@@ -682,9 +676,6 @@ function MiniAppScreenshot({ type }) {
                       <div className="text-[10px]" style={{ color: "rgba(255,255,255,0.7)" }}>Вы получите напоминание за 2 часа до встречи</div>
                     </div>
                   </div>
-                  <button className="w-full py-1.5 px-3 rounded-lg text-[10px] font-medium border transition-all duration-200 hover:opacity-90" style={{ background: "rgba(255,255,255,0.1)", color: "#FFFFFF", borderColor: "rgba(255,255,255,0.3)" }}>
-                    Отказаться
-                  </button>
                 </div>
               </div>
             </div>
@@ -3422,34 +3413,53 @@ export default function PsychologistLandingUpmini() {
 
           {/* Solution */}
           <section className="mx-auto max-w-7xl pt-14 md:pt-20">
-              <div className="grid lg:grid-cols-12 gap-6 items-stretch">
-            <div className="lg:col-span-5">
-              <SectionTitle
-                kicker="Решение"
-                title="Upmini — ваш кабинет записи"
-                desc="Мини-приложение в Telegram или Max, которое избавляет от длительных переписок, контролирует расписание и оплату."
-              />
-              <div className="mt-6 flex flex-wrap gap-2">
-                {[
-                  "без сайта",
-                  "без разработчика",
-                  "предоплата",
-                  "напоминания",
-                  "обратная связь",
-                  "история клиентов",
-                ].map((t) => (
-                  <Pill key={t}>{t}</Pill>
-                ))}
-              </div>
+            <div className="mb-4 md:mb-6">
+              <span
+                className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs md:text-sm border lg:whitespace-nowrap"
+                style={{
+                  background: "rgba(19, 39, 63, 0.1)",
+                  borderColor: "rgba(19, 39, 63, 0.1)",
+                  color: "#13273F",
+                  backdropFilter: "blur(14px)",
+                  WebkitBackdropFilter: "blur(14px)",
+                }}
+              >
+                Решение
+              </span>
             </div>
 
-            <div className="lg:col-span-7">
-              <div className="flex justify-center">
-                <MiniAppScreenshot type="client" />
+            <div className="grid lg:grid-cols-12 gap-6 items-stretch">
+              <div className="lg:col-span-5">
+                <h2
+                  className="text-2xl md:text-4xl font-semibold tracking-tight"
+                  style={{ color: "rgba(19, 39, 63, 0.95)" }}
+                >
+                  Upmini — ваш кабинет записи
+                </h2>
+                <p className="mt-3 text-base md:text-lg leading-relaxed" style={{ color: "rgba(19, 39, 63, 0.7)" }}>
+                  Мини-приложение в Telegram или Max, которое избавляет от длительных переписок, контролирует расписание и оплату.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {[
+                    "без сайта",
+                    "без разработчика",
+                    "предоплата",
+                    "напоминания",
+                    "обратная связь",
+                    "история клиентов",
+                  ].map((t) => (
+                    <Pill key={t}>{t}</Pill>
+                  ))}
+                </div>
+              </div>
+
+              <div className="lg:col-span-7">
+                <div className="flex justify-center">
+                  <MiniAppScreenshot type="client" />
+                </div>
               </div>
             </div>
-              </div>
-            </section>
+          </section>
 
             {/* Features */}
             <section id="features" className="mx-auto max-w-7xl pt-14 md:pt-20">
@@ -3626,7 +3636,18 @@ export default function PsychologistLandingUpmini() {
                     Создать кабинет
                   </button>
                   <div className="relative z-10">
-                    <GhostButton onClick={() => scrollToId("pricing")}>Посмотреть тариф</GhostButton>
+                    <button
+                      onClick={() => scrollToId("pricing")}
+                      className="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm md:text-base font-medium border transition-all duration-200"
+                      style={{
+                        color: "#13273F",
+                        background: "#FFFFFF",
+                        borderColor: "rgba(19, 39, 63, 0.22)",
+                        boxShadow: "inset 0 1px 0 rgba(255, 255, 255, 0.8)",
+                      }}
+                    >
+                      Посмотреть тариф
+                    </button>
                   </div>
                 </div>
               </GlassCard>
@@ -3689,7 +3710,18 @@ export default function PsychologistLandingUpmini() {
                   >
                     Создать кабинет
                   </button>
-                  <GhostButton onClick={() => scrollToId("pricing")}>Посмотреть тариф</GhostButton>
+                  <button
+                    onClick={() => scrollToId("pricing")}
+                    className="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm md:text-base font-medium border transition-all duration-200"
+                    style={{
+                      color: "#13273F",
+                      background: "#FFFFFF",
+                      borderColor: "rgba(19, 39, 63, 0.22)",
+                      boxShadow: "inset 0 1px 0 rgba(255, 255, 255, 0.8)",
+                    }}
+                  >
+                    Посмотреть тариф
+                  </button>
                 </div>
               </GlassCard>
             </div>
@@ -3996,7 +4028,7 @@ export default function PsychologistLandingUpmini() {
                     </p>
 
                     {/* Форма для звонка */}
-                    <div className="mt-4 pt-2 grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-4 items-stretch">
+                    <div className="mt-4 pt-2 grid grid-cols-1 md:grid-cols-[1fr_0.95fr] gap-4 items-stretch">
                       <div className="w-full h-full rounded-2xl border p-5" style={{ borderColor: "rgba(19, 39, 63, 0.1)", background: "#FFFFFF" }}>
                         <div className="text-sm font-semibold mb-4" style={{ color: "#13273F" }}>
                           Мы вам перезвоним
@@ -4013,29 +4045,52 @@ export default function PsychologistLandingUpmini() {
                               outline: "none",
                             }}
                           />
-                          <button
-                            onClick={() => window.open("https://t.me/avotaangi", "_blank", "noopener,noreferrer")}
-                            className="w-full inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm font-medium border transition-all duration-200"
-                            style={{
-                              color: "#13273F",
-                              background: "#FFFFFF",
-                              borderColor: "#13273F",
-                            }}
-                          >
-                            Заказать сообщение в Telegram
-                          </button>
-                          <button
-                            onClick={() => alert("Подключите действие: отправка формы звонка")}
-                            className="w-full inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm font-medium border transition-all duration-200"
-                            style={{
-                              color: "#FFFFFF",
-                              background: "#13273F",
-                              borderColor: "rgba(19, 39, 63, 0.1)",
-                              boxShadow: "rgba(19, 39, 63, 0.3) 0px 18px 60px",
-                            }}
-                          >
-                            Заказать звонок
-                          </button>
+                          <label className="flex items-start gap-2 text-xs" style={{ color: "rgba(19, 39, 63, 0.8)" }}>
+                            <input type="checkbox" className="mt-0.5" />
+                            <span>
+                              Я согласен на обработку{" "}
+                              <button
+                                type="button"
+                                className="underline underline-offset-2"
+                                style={{ color: "#13273F" }}
+                                onClick={() => alert("Подключите ссылку: политика обработки персональных данных")}
+                              >
+                                персональных данных
+                              </button>
+                              .
+                            </span>
+                          </label>
+                          <label className="flex items-start gap-2 text-xs" style={{ color: "rgba(19, 39, 63, 0.8)" }}>
+                            <input type="checkbox" className="mt-0.5" />
+                            <span>
+                              Я согласен получать полезные материалы, обновления и рекомендации по продукту Upmini.
+                            </span>
+                          </label>
+                          <div className="grid grid-cols-2 gap-2">
+                            <button
+                              onClick={() => window.open("https://t.me/avotaangi", "_blank", "noopener,noreferrer")}
+                              className="w-full inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-medium border transition-all duration-200"
+                              style={{
+                                color: "#13273F",
+                                background: "#FFFFFF",
+                                borderColor: "#13273F",
+                              }}
+                            >
+                              Заказать сообщение в Telegram
+                            </button>
+                            <button
+                              onClick={() => alert("Подключите действие: отправка формы звонка")}
+                              className="w-full inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-medium border transition-all duration-200"
+                              style={{
+                                color: "#FFFFFF",
+                                background: "#13273F",
+                                borderColor: "rgba(19, 39, 63, 0.1)",
+                                boxShadow: "rgba(19, 39, 63, 0.3) 0px 18px 60px",
+                              }}
+                            >
+                              Заказать звонок
+                            </button>
+                          </div>
                         </div>
                       </div>
 
@@ -4058,7 +4113,7 @@ export default function PsychologistLandingUpmini() {
                     </div>
 
                     <p className="mt-4 text-sm md:text-base" style={{ color: PALETTE.muted }}>
-                      Или попробуйте самостоятельно
+                      Остались вопросы? Напишите нам в Telegram.
                     </p>
 
                     <div className="mt-4 flex flex-col sm:flex-row gap-3">
@@ -4087,82 +4142,20 @@ export default function PsychologistLandingUpmini() {
                       </button>
                     </div>
 
-                    <div className="mt-4 text-sm" style={{ color: PALETTE.muted2 }}>
-                      Остались вопросы? Напишите нам в Telegram.
-                    </div>
-
                     <div
-                      className="mt-4 pt-4 border-t flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+                      className="mt-6 pt-4 border-t flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
                       style={{ borderColor: "rgba(19, 39, 63, 0.25)" }}
                     >
-                      <div className="flex items-center gap-5 md:min-w-[560px]">
-                        <svg width="64" height="64" viewBox="0 0 375 376" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <div className="flex items-center gap-3 md:min-w-[560px]">
+                        <svg width="44" height="44" viewBox="0 0 375 376" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M293.831 0H81.1695C36.3408 0 0 36.3465 0 81.1823V293.877C0 338.713 36.3408 375.059 81.1695 375.059H293.831C338.659 375.059 375 338.713 375 293.877V81.1823C375 36.3465 338.659 0 293.831 0Z" fill="#060F30"/>
                           <path d="M305.819 145.887C303.971 133.565 298.901 123.66 290.656 116.077C282.411 108.494 271.56 104.703 258.15 104.703C244.741 104.703 233.321 108.068 222.707 114.845C212.093 121.622 203.374 131.243 196.551 143.754V107.547H176.412L176.981 207.307C172.859 219.96 165.135 230.766 155.99 238.633C146.323 247.021 135.472 251.239 123.484 251.239C111.496 251.239 102.682 246.879 96.9014 238.159C91.1205 229.439 88.2301 215.695 88.2301 196.833V107.357H67.1914V205.127C67.1914 205.127 67.1914 219.771 69.0394 229.202C70.8874 241.523 75.9575 251.428 84.2024 259.011C92.4473 266.594 103.298 270.385 116.708 270.385C130.118 270.385 141.537 267.02 152.152 260.243C162.197 253.845 170.537 244.841 177.171 233.277L177.36 267.684H198.399V169.535C202.332 155.839 209.108 144.797 218.821 136.361C228.535 127.973 239.339 123.755 251.327 123.755C263.315 123.755 272.129 128.115 277.91 136.835C283.691 145.555 286.581 159.299 286.581 178.161V267.636H307.62V169.867C307.62 169.867 307.62 155.223 305.772 145.792L305.819 145.887Z" fill="#F2F2F2"/>
                         </svg>
-                        <div className="text-base leading-relaxed" style={{ color: "rgba(19, 39, 63, 0.65)" }}>
+                        <div className="text-sm leading-relaxed" style={{ color: "rgba(19, 39, 63, 0.65)" }}>
                           © {new Date().getFullYear()} Upmini.app • Кабинет записи для психолога
                           <br />
                           Telegram / Max
                         </div>
-                      </div>
-
-                      <div className="flex flex-wrap gap-2 md:justify-end md:min-w-[620px]">
-                        <button
-                          className="text-xs px-4 py-1 rounded-2xl border transition-all hover:opacity-90"
-                          style={{
-                            color: "#13273F",
-                            borderColor: "rgba(19, 39, 63, 0.22)",
-                            background: "#FFFFFF",
-                          }}
-                          onClick={() => alert("Подключите ссылку: согласие на обработку персональных данных")}
-                        >
-                          Согласие на обработку персональных данных
-                        </button>
-                        <button
-                          className="text-xs px-4 py-1 rounded-2xl border transition-all hover:opacity-90"
-                          style={{
-                            color: "#13273F",
-                            borderColor: "rgba(19, 39, 63, 0.22)",
-                            background: "#FFFFFF",
-                          }}
-                          onClick={() => alert("Подключите ссылку: публичная оферта")}
-                        >
-                          Публичная оферта
-                        </button>
-                        <button
-                          className="text-xs px-4 py-1 rounded-2xl border transition-all hover:opacity-90"
-                          style={{
-                            color: "#13273F",
-                            borderColor: "rgba(19, 39, 63, 0.22)",
-                            background: "#FFFFFF",
-                          }}
-                          onClick={() => alert("Подключите ссылку: условия использования")}
-                        >
-                          Условия использования
-                        </button>
-                        <button
-                          className="text-xs px-4 py-1 rounded-2xl border transition-all hover:opacity-90"
-                          style={{
-                            color: "#13273F",
-                            borderColor: "rgba(19, 39, 63, 0.22)",
-                            background: "#FFFFFF",
-                          }}
-                          onClick={() => alert("Подключите ссылку: политика использования cookies")}
-                        >
-                          Политика использования cookies
-                        </button>
-                        <button
-                          className="text-xs px-4 py-1 rounded-2xl border transition-all hover:opacity-90"
-                          style={{
-                            color: "#13273F",
-                            borderColor: "rgba(19, 39, 63, 0.22)",
-                            background: "#FFFFFF",
-                          }}
-                          onClick={() => alert("Подключите ссылку: политика конфиденциальности")}
-                        >
-                          Политика конфиденциальности
-                        </button>
                       </div>
                     </div>
 
@@ -4194,18 +4187,88 @@ export default function PsychologistLandingUpmini() {
                         <div className="mt-3 text-xs leading-relaxed" style={{ color: "rgba(11, 21, 56, 0.76)" }}>
                           <div>123308, РОССИЯ, Г МОСКВА, УЛ 3-Я ХОРОШЁВСКАЯ, ДОМ 2, КОРПУС СТР. 1, ОФ ПОМЕЩ. 115/3</div>
                           <div>Email: info@upmini.app</div>
-                          <div>
-                            Telegram:{" "}
-                            <button
-                              className="underline underline-offset-2"
-                              onClick={() => window.open("https://t.me/avotaangi", "_blank", "noopener,noreferrer")}
-                              style={{ color: "rgba(11, 21, 56, 0.82)" }}
-                            >
-                              @avotaangi
-                            </button>
-                          </div>
                         </div>
                       </div>
+                    </div>
+
+                    <div className="mt-3 flex flex-wrap lg:flex-nowrap lg:justify-between gap-1 w-full">
+                      <button
+                        className="text-[10px] px-3 py-1 rounded-lg border transition-all hover:opacity-90 whitespace-nowrap flex-none"
+                        style={{
+                          color: "#13273F",
+                          borderColor: "rgba(19, 39, 63, 0.22)",
+                          background: "#FFFFFF",
+                        }}
+                        onClick={() => alert("Подключите ссылку: политика обработки персональных данных")}
+                      >
+                        Политика обработки персональных данных
+                      </button>
+                      <button
+                        className="text-[10px] px-3 py-1 rounded-lg border transition-all hover:opacity-90 whitespace-nowrap flex-none"
+                        style={{
+                          color: "#13273F",
+                          borderColor: "rgba(19, 39, 63, 0.22)",
+                          background: "#FFFFFF",
+                        }}
+                        onClick={() => alert("Подключите ссылку: пользовательское соглашение")}
+                      >
+                        Пользовательское соглашение
+                      </button>
+                      <button
+                        className="text-[10px] px-3 py-1 rounded-lg border transition-all hover:opacity-90 whitespace-nowrap flex-none"
+                        style={{
+                          color: "#13273F",
+                          borderColor: "rgba(19, 39, 63, 0.22)",
+                          background: "#FFFFFF",
+                        }}
+                        onClick={() => alert("Подключите ссылку: публичная оферта")}
+                      >
+                        Публичная оферта
+                      </button>
+                      <button
+                        className="text-[10px] px-3 py-1 rounded-lg border transition-all hover:opacity-90 whitespace-nowrap flex-none"
+                        style={{
+                          color: "#13273F",
+                          borderColor: "rgba(19, 39, 63, 0.22)",
+                          background: "#FFFFFF",
+                        }}
+                        onClick={() => alert("Подключите ссылку: реквизиты компании")}
+                      >
+                        Реквизиты компании
+                      </button>
+                      <button
+                        className="text-[10px] px-3 py-1 rounded-lg border transition-all hover:opacity-90 whitespace-nowrap flex-none"
+                        style={{
+                          color: "#13273F",
+                          borderColor: "rgba(19, 39, 63, 0.22)",
+                          background: "#FFFFFF",
+                        }}
+                        onClick={() => alert("Подключите ссылку: cookie-уведомление")}
+                      >
+                        Cookie-уведомление
+                      </button>
+                      <button
+                        className="text-[10px] px-3 py-1 rounded-lg border transition-all hover:opacity-90 whitespace-nowrap flex-none"
+                        style={{
+                          color: "#13273F",
+                          borderColor: "rgba(19, 39, 63, 0.22)",
+                          background: "#FFFFFF",
+                        }}
+                        onClick={() => alert("Подключите ссылку: политика возврата")}
+                      >
+                        Политика возврата
+                      </button>
+                      <button
+                        className="text-[10px] px-3 py-1 rounded-lg border transition-all hover:opacity-90 whitespace-nowrap flex-none"
+                        style={{
+                          color: "#13273F",
+                          borderColor: "rgba(19, 39, 63, 0.22)",
+                          background: "#FFFFFF",
+                        }}
+                        onClick={() => alert("Подключите ссылку: правила использования сервиса")}
+                      >
+                        Правила использования сервиса
+                      </button>
                     </div>
 
                   </div>
