@@ -726,11 +726,6 @@ function MiniAppScreenshot({ type }) {
       >
         <div className="relative flex items-center justify-center p-4">
           <div className="w-full max-w-2xl space-y-4">
-            {/* Заголовок */}
-            <div className="text-base font-semibold text-center" style={{ color: "#13273F" }}>
-              Дата и время записи
-            </div>
-
             {/* Табы */}
             <div className="flex gap-2">
               <button 
@@ -831,93 +826,68 @@ function MiniAppScreenshot({ type }) {
       >
         <div className="relative flex items-center justify-center p-4">
           <div className="w-full max-w-2xl space-y-4">
-            {/* Заголовок */}
-            <div className="text-base font-semibold text-center" style={{ color: "#13273F" }}>
-              Домашнее задание
-            </div>
-
-            {/* Задание от психолога */}
-            <div className="border p-4 rounded-2xl" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(19, 39, 63, 0.05)" }}>
-              <div className="flex items-start gap-3 mb-3">
-                <div className="h-10 w-10 rounded-full border flex items-center justify-center shrink-0" style={{ borderColor: "#13273F", background: "#13273F" }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                    <polyline points="14 2 14 8 20 8" />
-                    <line x1="16" y1="13" x2="8" y2="13" />
-                    <line x1="16" y1="17" x2="8" y2="17" />
-                    <polyline points="10 9 9 9 8 9" />
-                  </svg>
+            <div className="border rounded-2xl overflow-hidden" style={{ borderColor: "rgba(13, 31, 45, 0.08)", background: "#FFFFFF" }}>
+              <div className="flex items-center justify-between gap-3 p-4" style={{ background: "#FFFFFF" }}>
+                <div className="text-left">
+                  <div className="text-sm font-semibold" style={{ color: "#13273F" }}>15 ноября, 14:00</div>
+                  <div className="text-xs mt-0.5" style={{ color: "rgba(19, 39, 63, 0.7)" }}>Специалист: Алина Игнатова</div>
                 </div>
-                <div className="flex-1">
-                  <div className="text-sm font-semibold mb-1" style={{ color: "#13273F" }}>
-                    Задание от Алины Игнатовой
-                  </div>
-                  <div className="text-xs mb-2" style={{ color: "rgba(19, 39, 63, 0.7)" }}>
+                <div className="px-2.5 py-1 rounded-full text-xs font-semibold" style={{ background: "rgba(37, 99, 235, 0.12)", color: "#2563EB" }}>
+                  Новое
+                </div>
+              </div>
+
+              <div className="p-4 space-y-4" style={{ borderTop: "1px solid rgba(13, 31, 45, 0.08)" }}>
+                <div className="space-y-2">
+                  <div className="text-sm font-semibold" style={{ color: "#13273F" }}>Задание</div>
+                  <p className="text-sm leading-relaxed m-0" style={{ color: "rgba(19, 39, 63, 0.9)" }}>
                     В течение недели ведите дневник тревожных ситуаций. Записывайте время, место и ваши мысли в момент тревоги.
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <div className="text-xs" style={{ color: "rgba(19, 39, 63, 0.6)" }}>
-                      Дедлайн: до следующей встречи
-                    </div>
-                    <div className="px-1.5 py-0.5 rounded text-[10px] font-medium" style={{ background: "rgba(16, 185, 129, 0.1)", color: "#10B981" }}>
-                      Автоматически
-                    </div>
-                  </div>
+                  </p>
+                  <div className="text-xs" style={{ color: "rgba(19, 39, 63, 0.7)" }}>Дедлайн: 22 ноября 2024</div>
+                  <button className="px-2.5 py-1.5 rounded-lg text-xs" style={{ background: "rgba(37, 99, 235, 0.08)", color: "#2563EB" }}>
+                    Дневник_тревоги.pdf
+                  </button>
                 </div>
-              </div>
-            </div>
 
-            {/* Форма отправки */}
-            <div className="border p-4 rounded-2xl" style={{ borderColor: "rgba(19, 39, 63, 0.2)" }}>
-              <div className="text-sm font-semibold mb-3" style={{ color: "#13273F" }}>
-                Ваш ответ
-              </div>
-              <textarea
-                className="w-full p-3 rounded-xl border mb-3 text-sm resize-none"
-                style={{
-                  borderColor: "rgba(19, 39, 63, 0.2)",
-                  background: "#FFFFFF",
-                  color: "#13273F",
-                  minHeight: "120px",
-                }}
-                placeholder="Опишите выполненное задание..."
-                defaultValue="1. Встреча с начальником - сильная тревога
-2. Разговор с мамой - средняя тревога
-3. Поездка в метро - легкая тревога"
-                readOnly
-              />
-              <div className="flex items-center gap-2 mb-3">
-                <button className="px-3 py-2 rounded-lg border text-xs font-medium" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "#FFFFFF", color: "#13273F" }}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="inline mr-1">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="17 8 12 3 7 8" />
-                    <line x1="12" y1="3" x2="12" y2="15" />
-                  </svg>
-                  Прикрепить файл
-                </button>
-                <div className="text-xs" style={{ color: "rgba(19, 39, 63, 0.6)" }}>
-                  Файл не выбран
+                <div className="space-y-2">
+                  <div className="text-sm font-semibold" style={{ color: "#13273F" }}>Ваш ответ</div>
+                  <textarea
+                    className="w-full p-3 rounded-xl border text-sm resize-none"
+                    style={{
+                      borderColor: "rgba(19, 39, 63, 0.2)",
+                      background: "#FFFFFF",
+                      color: "#13273F",
+                      minHeight: "96px",
+                    }}
+                    placeholder="Опишите ваш ответ на задание"
+                    defaultValue="1. Встреча с начальником — сильная тревога
+2. Разговор с мамой — средняя тревога
+3. Поездка в метро — легкая тревога"
+                  />
+
+                  <div className="space-y-2">
+                    <button className="w-full border p-2 rounded-xl flex items-center justify-center gap-2 transition-all hover:opacity-70" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "#FFFFFF" }}>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(19, 39, 63, 0.6)" strokeWidth="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                      </svg>
+                      <div className="text-xs font-medium" style={{ color: "rgba(19, 39, 63, 0.7)" }}>
+                        Прикрепить файл
+                      </div>
+                    </button>
+                    <div className="text-xs" style={{ color: "rgba(19, 39, 63, 0.6)" }}>Файлы не выбраны</div>
+                  </div>
+
+                  <button
+                    className="w-full py-3 px-4 rounded-xl text-sm font-medium"
+                    style={{
+                      background: "#13273F",
+                      color: "#FFFFFF",
+                    }}
+                  >
+                    Отправить ответ
+                  </button>
                 </div>
-              </div>
-              <button
-                className="w-full py-3 px-4 rounded-xl text-sm font-medium"
-                style={{
-                  background: "#13273F",
-                  color: "#FFFFFF",
-                }}
-              >
-                Отправить задание
-              </button>
-            </div>
-
-            {/* Статус отправки */}
-            <div className="border p-3 rounded-xl flex items-center gap-2" style={{ borderColor: "rgba(16, 185, 129, 0.3)", background: "rgba(16, 185, 129, 0.1)" }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                <polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              <div className="text-xs font-medium" style={{ color: "#10B981" }}>
-                Задание отправлено 15 ноября в 11:45
               </div>
             </div>
           </div>
@@ -935,11 +905,6 @@ function MiniAppScreenshot({ type }) {
       >
         <div className="relative flex items-center justify-center p-4">
           <div className="w-full max-w-2xl space-y-4">
-            {/* Заголовок */}
-            <div className="text-base font-semibold text-center" style={{ color: "#FFFFFF" }}>
-              Мои консультации
-            </div>
-
             {/* Список консультаций */}
             <div className="space-y-3">
               {/* Консультация 1 - Оплачено */}
@@ -1086,11 +1051,6 @@ function MiniAppScreenshot({ type }) {
       >
         <div className="relative flex items-center justify-center p-4">
           <div className="w-full max-w-2xl space-y-4">
-            {/* Заголовок */}
-            <div className="text-base font-semibold text-center" style={{ color: "#13273F" }}>
-              История консультаций
-            </div>
-
             {/* Поисковая строка */}
             <div className="relative">
               <input
@@ -1277,19 +1237,24 @@ function FilesAndFeedback() {
     >
       <div className="relative flex items-center justify-center p-4">
         <div className="w-full max-w-2xl space-y-4">
-          <div className="text-base font-semibold text-center" style={{ color: "#13273F" }}>
-            Файлы и обратная связь
-          </div>
-          
           {/* Консультация */}
           <div className="border p-4 rounded-2xl" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(19, 39, 63, 0.03)" }}>
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex-1">
-                <div className="text-sm font-semibold mb-1" style={{ color: "#13273F" }}>
-                  15 ноября, 14:00
-                </div>
-                <div className="text-xs mb-2" style={{ color: "rgba(19, 39, 63, 0.7)" }}>
-                  Консультация • Работа с тревогой
+            <div className="mb-3">
+              <div className="text-sm font-semibold mb-1" style={{ color: "#13273F" }}>
+                15 ноября, 14:00
+              </div>
+              <div className="text-xs mb-2" style={{ color: "rgba(19, 39, 63, 0.7)" }}>
+                Консультация • Работа с тревогой
+              </div>
+              <div className="space-y-1.5">
+                <div className="flex items-center gap-1.5">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(19, 39, 63, 0.6)" strokeWidth="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                  <div className="text-xs font-semibold" style={{ color: "#13273F" }}>
+                    Клиент • Имя Клиента
+                  </div>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(19, 39, 63, 0.6)" strokeWidth="2">
@@ -1297,13 +1262,8 @@ function FilesAndFeedback() {
                     <circle cx="12" cy="7" r="4" />
                   </svg>
                   <div className="text-xs font-semibold" style={{ color: "#13273F" }}>
-                    Алина Игнатова
+                    Специалист • Алина Игнатова
                   </div>
-                </div>
-              </div>
-              <div className="px-3 py-1 rounded-lg" style={{ background: "rgba(16, 185, 129, 0.1)" }}>
-                <div className="text-xs font-semibold" style={{ color: "#10B981" }}>
-                  Проведено
                 </div>
               </div>
             </div>
@@ -1315,33 +1275,7 @@ function FilesAndFeedback() {
                   Прикрепленные файлы
                 </div>
                 <div className="space-y-2">
-                  <div className="border p-2 rounded-xl flex items-center gap-2" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(19, 39, 63, 0.02)" }}>
-                    <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "rgba(19, 39, 63, 0.1)" }}>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#13273F" strokeWidth="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
-                      </svg>
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-xs font-medium" style={{ color: "#13273F" }}>
-                        Заметки_сессии.pdf
-                      </div>
-                      <div className="text-[10px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>
-                        245 КБ
-                      </div>
-                    </div>
-                    <button className="p-1 rounded-lg hover:opacity-70 transition-all" style={{ background: "rgba(19, 39, 63, 0.1)" }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#13273F" strokeWidth="2">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg>
-                    </button>
-                  </div>
-                  
-                  <button className="w-full border-2 border-dashed p-2 rounded-xl flex items-center justify-center gap-2 transition-all hover:opacity-70" style={{ borderColor: "rgba(19, 39, 63, 0.3)", background: "rgba(19, 39, 63, 0.02)" }}>
+                  <button className="w-full border p-2 rounded-xl flex items-center justify-center gap-2 transition-all hover:opacity-70" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "#FFFFFF" }}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(19, 39, 63, 0.6)" strokeWidth="2">
                       <line x1="12" y1="5" x2="12" y2="19"></line>
                       <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -1350,6 +1284,19 @@ function FilesAndFeedback() {
                       Прикрепить файл
                     </div>
                   </button>
+                  <div className="border p-2 rounded-xl flex items-center justify-between gap-2" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(19, 39, 63, 0.02)" }}>
+                    <div>
+                      <div className="text-xs font-semibold" style={{ color: "#13273F" }}>
+                        Заметки_сессии.pdf
+                      </div>
+                      <div className="text-[10px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>
+                        245 КБ
+                      </div>
+                    </div>
+                    <button className="w-6 h-6 rounded-lg border flex items-center justify-center" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(19, 39, 63, 0.04)", color: "rgba(19, 39, 63, 0.7)" }}>
+                      ×
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -1375,34 +1322,17 @@ function FilesAndFeedback() {
                   />
                 </div>
                 
-                {/* Дедлайн */}
                 <div className="mt-3">
                   <div className="text-xs font-semibold mb-2" style={{ color: "#13273F" }}>
                     Дедлайн
                   </div>
-                  <div className="flex items-center gap-2">
-                    <input
-                      type="date"
-                      className="flex-1 border p-2 rounded-lg text-xs"
-                      style={{
-                        borderColor: "rgba(19, 39, 63, 0.2)",
-                        background: "#FFFFFF",
-                        color: "#13273F",
-                        outline: "none",
-                      }}
-                      defaultValue="2024-11-22"
-                    />
-                    <button className="px-3 py-2 rounded-lg text-xs font-medium border transition-all hover:opacity-70" style={{ borderColor: "rgba(19, 39, 63, 0.2)", color: "rgba(19, 39, 63, 0.7)", background: "rgba(19, 39, 63, 0.02)" }}>
-                      Следующая встреча
-                    </button>
-                  </div>
-                </div>
-                
-                <div className="mt-2 flex items-center gap-2">
-                  <button className="px-3 py-1.5 rounded-lg text-xs font-medium border transition-all hover:opacity-70" style={{ borderColor: "rgba(19, 39, 63, 0.2)", color: "rgba(19, 39, 63, 0.7)", background: "#FFFFFF" }}>
-                    Сохранить (пока не отправлять)
+                  <button className="w-full px-3 py-2 rounded-lg text-xs font-semibold border transition-all hover:opacity-70" style={{ borderColor: "rgba(19, 39, 63, 0.2)", color: "#13273F", background: "#FFFFFF" }}>
+                    Добавить дедлайн
                   </button>
-                  <button className="px-3 py-1.5 rounded-lg text-xs font-medium transition-all hover:opacity-90" style={{ background: "#13273F", color: "#FFFFFF" }}>
+                </div>
+
+                <div className="mt-2 flex items-center gap-2">
+                  <button className="w-full py-3 px-4 rounded-xl text-sm font-medium transition-all hover:opacity-90" style={{ background: "#13273F", color: "#FFFFFF" }}>
                     Отправить клиенту
                   </button>
                 </div>
@@ -1597,6 +1527,10 @@ export default function PsychologistLandingUpmini() {
         title: "Файлы и обратная связь теряются в переписках?",
         desc: "Клиент отправляет файлы и отзывы в чат, но их сложно найти и систематизировать.",
       },
+      {
+        title: "История и аналитика разрознены?",
+        desc: "Нет общей сводки по сессиям, оплатам и загрузке — динамику сложно видеть и планировать.",
+      },
     ],
     []
   );
@@ -1634,7 +1568,7 @@ export default function PsychologistLandingUpmini() {
       {
         q: "Что будет после 14 дней теста?",
         a:
-          "Вы сами решаете — продолжить или нет. Если подходит — подписка 1 900 ₽/мес. Если нет — ничего платить не нужно. Также можно воспользоваться программой лояльности: пригласите коллегу-психолога и получите месяц пользования платформой дополнительно. Количество приглашённых коллег — без ограничений.",
+          "Вы сами решаете — продолжить или нет. Если подходит — подписка 1 900 ₽/мес. Если нет — ничего платить не нужно. Также можно воспользоваться программой лояльности: пригласите коллегу-психолога и получите месяц пользования платформой дополнительно к подписке на 3 месяца (3+1). Количество приглашённых коллег — без ограничений.",
       },
       {
         q: "Как проходит оплата сессии от клиента?",
@@ -1814,7 +1748,7 @@ export default function PsychologistLandingUpmini() {
 
                 <div className="mt-6">
                   <div className="text-xs" style={{ color: PALETTE.muted2 }}>
-                    Без спешки и технических сложностей. Напишите нам в личные сообщения — мы бережно соберём ваш кабинет записи бесплатно.
+                    Без спешки и технических сложностей. Напишите нам в личные сообщения — проконсультируем по созданию Telegram- и MAX-ботов, расскажем о функционале платформы, подберем подходящий тариф, а также подключим кабинет записи.
                   </div>
                 </div>
 
@@ -1888,52 +1822,56 @@ export default function PsychologistLandingUpmini() {
                             <div className="h-4 w-4 rounded border" style={{ borderColor: "rgba(0,0,0,0.16)", background: "radial-gradient(circle at 30% 30%, rgba(0,0,0,0.08), rgba(0,0,0,0.02) 60%)" }} />
                             <div>
                               <div className="text-[8px] font-semibold" style={{ color: "#000000" }}>Психолог</div>
-                              <div className="text-[7px]" style={{ color: "rgba(0,0,0,0.6)" }}>запись • предоплата</div>
+                              <div className="text-[7px]" style={{ color: "rgba(0,0,0,0.6)" }}>запись • слоты • аналитика</div>
                             </div>
                           </div>
 
                           <div className="mt-0.5 grid grid-cols-2 gap-0.5">
                             <div className="border p-0.5 flex flex-col h-full" style={{ borderRadius: "1rem", borderColor: "rgba(0,0,0,0.12)", background: "#13273F", paddingTop: "calc(0.125rem + 2px)", paddingBottom: "calc(0.125rem + 1px)", paddingLeft: "calc(0.125rem + 1px)", paddingRight: "calc(0.125rem + 1px)" }}>
-                              <div className="text-[7px] h-[0.875rem]" style={{ color: "rgba(255,255,255,0.6)" }}>ближайшее</div>
-                              <div className="mt-0.5 text-[8px] font-semibold min-h-[1.5rem] leading-tight" style={{ color: "#FFFFFF" }}>Сегодня 18:30</div>
+                              <div className="text-[7px] h-[1.25rem] mb-0.5" style={{ color: "rgba(255,255,255,0.6)" }}>ближайшая запись</div>
+                              <div className="mt-1 text-[8px] font-semibold min-h-[1.5rem] leading-tight" style={{ color: "#FFFFFF" }}>Сегодня 18:30</div>
                               <div className="mt-0.5 flex flex-wrap gap-0.5 min-h-[1.25rem]">
                                 <span className="px-1 py-0.5 rounded-full text-[7px] border whitespace-nowrap" style={{ borderColor: "rgba(255,255,255,0.14)", background: "#13273F", color: "rgba(255,255,255,0.7)" }}>50 мин</span>
                                 <span className="px-1 py-0.5 rounded-full text-[7px] border whitespace-nowrap" style={{ borderColor: "rgba(255,255,255,0.14)", background: "#13273F", color: "rgba(255,255,255,0.7)" }}>предоплата</span>
                               </div>
                             </div>
                             <div className="border p-0.5 flex flex-col h-full" style={{ borderRadius: "1rem", borderColor: "rgba(0,0,0,0.12)", background: "#13273F", paddingTop: "calc(0.125rem + 2px)", paddingBottom: "calc(0.125rem + 1px)", paddingLeft: "calc(0.125rem + 1px)", paddingRight: "calc(0.125rem + 1px)" }}>
-                              <div className="text-[7px] h-[0.875rem]" style={{ color: "rgba(255,255,255,0.6)" }}>напоминание</div>
-                              <div className="mt-0.5 text-[8px] font-semibold min-h-[1.5rem] leading-tight" style={{ color: "#FFFFFF" }}>за 2 часа</div>
-                              <div className="mt-0.5 text-[7px] leading-relaxed min-h-[1.25rem]" style={{ color: "rgba(255,255,255,0.7)" }}>Авто-уведомление</div>
+                              <div className="text-[7px] h-[1.25rem]" style={{ color: "rgba(255,255,255,0.6)" }}>обратная связь</div>
+                              <div className="mt-1 text-[8px] font-semibold min-h-[1.5rem] leading-tight" style={{ color: "#FFFFFF" }}>3 ответа</div>
+                              <button className="mt-0.5 px-1 py-0.5 text-[7px] border w-fit" style={{ borderRadius: "0.75rem", color: "#FFFFFF", borderColor: "rgba(255,255,255,0.4)" }}>Смотреть</button>
                             </div>
                           </div>
 
                           <div className="mt-0.5">
                             <button className="w-full border p-1" style={{ borderRadius: "1rem", background: "#FFFFFF", borderColor: "#13273F" }}>
                               <div className="text-center">
-                                <div className="text-[8px] font-medium" style={{ color: "#13273F" }}>Мои слоты</div>
-                                <div className="mt-0 text-[7px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>Управление расписанием</div>
-                              </div>
-                            </button>
-                          </div>
-
-                          <div className="mt-0.5 grid grid-cols-12 gap-0.5">
-                            <button className="col-span-7 border p-1" style={{ borderRadius: "1rem", background: "#FFFFFF", borderColor: "#13273F" }}>
-                              <div className="text-center">
-                                <div className="text-[8px] font-medium" style={{ color: "#13273F" }}>Статистика</div>
-                                <div className="mt-0 text-[7px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>Доходы, графики</div>
-                              </div>
-                            </button>
-                            <button className="col-span-5 border p-1" style={{ borderRadius: "1rem", background: "#FFFFFF", borderColor: "#13273F" }}>
-                              <div className="text-center">
-                                <div className="text-[8px] font-medium" style={{ color: "#13273F" }}>История</div>
-                                <div className="mt-0 text-[7px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>Архив</div>
+                                <div className="text-[8px] font-medium" style={{ color: "#13273F" }}>Мои доступные слоты</div>
+                                <div className="mt-0 text-[7px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>Управление расписанием и свободными окнами</div>
                               </div>
                             </button>
                           </div>
 
                           <div className="mt-0.5">
                             <button className="w-full border p-1" style={{ borderRadius: "1rem", background: "#FFFFFF", borderColor: "#13273F" }}>
+                              <div className="text-center">
+                                <div className="text-[8px] font-medium" style={{ color: "#13273F" }}>Назначить консультацию вручную</div>
+                                <div className="mt-0 text-[7px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>Создайте консультацию для клиента вручную</div>
+                              </div>
+                            </button>
+                          </div>
+
+                          <div className="mt-0.5 px-0.5">
+                            <div className="text-[7px] font-semibold" style={{ color: "rgba(19, 39, 63, 0.75)", paddingTop: "4px", paddingBottom: "4px" }}>Контроль и аналитика</div>
+                          </div>
+
+                          <div className="mt-0.5 grid grid-cols-2 gap-0.5">
+                            <button className="border p-1" style={{ borderRadius: "1rem", background: "#FFFFFF", borderColor: "#13273F" }}>
+                              <div className="text-center">
+                                <div className="text-[8px] font-medium" style={{ color: "#13273F" }}>Календарь</div>
+                                <div className="mt-0 text-[7px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>Расписание и окна</div>
+                              </div>
+                            </button>
+                            <button className="border p-1" style={{ borderRadius: "1rem", background: "#FFFFFF", borderColor: "#13273F" }}>
                               <div className="text-center">
                                 <div className="text-[8px] font-medium" style={{ color: "#13273F" }}>Справочник</div>
                                 <div className="mt-0 text-[7px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>Список всех клиентов</div>
@@ -1941,8 +1879,23 @@ export default function PsychologistLandingUpmini() {
                             </button>
                           </div>
 
+                          <div className="mt-0.5 grid grid-cols-2 gap-0.5">
+                            <button className="border p-1" style={{ borderRadius: "1rem", background: "#FFFFFF", borderColor: "#13273F" }}>
+                              <div className="text-center">
+                                <div className="text-[8px] font-medium" style={{ color: "#13273F" }}>История</div>
+                                <div className="mt-0 text-[7px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>Архив сессий и записей</div>
+                              </div>
+                            </button>
+                            <button className="border p-1" style={{ borderRadius: "1rem", background: "#FFFFFF", borderColor: "#13273F" }}>
+                              <div className="text-center">
+                                <div className="text-[8px] font-medium" style={{ color: "#13273F" }}>Аналитика</div>
+                                <div className="mt-0 text-[7px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>Нагрузка, доходы, динамика</div>
+                              </div>
+                            </button>
+                          </div>
+
                           <div className="mt-0.5 flex flex-col gap-0.5" style={{ perspective: "1000px" }}>
-                            <div style={{ position: "relative", width: "100%", height: "auto" }}>
+                            <div style={{ position: "relative", width: "100%", height: "auto", marginTop: "2px" }}>
                               <motion.div 
                                 className="border"
                                 style={{
@@ -1974,7 +1927,7 @@ export default function PsychologistLandingUpmini() {
                                   <div className="flex flex-col items-center text-center mb-1">
                                     <div className="h-6 w-6 rounded-full border mb-0.5 shrink-0" style={{ borderColor: "rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.1)" }} />
                                     <div className="text-[8px] font-semibold mb-0.5" style={{ color: "#FFFFFF" }}>Имя Клиента</div>
-                                    <div className="text-[7px] leading-relaxed px-0.5" style={{ color: "rgba(255,255,255,0.7)" }}>Готова к консультации</div>
+                                    <div className="text-[7px] leading-relaxed px-0.5" style={{ color: "rgba(255,255,255,0.7)" }}>Готова к консультации, хочу обсудить тревожность и план на ближайшие недели.</div>
                                   </div>
                                   <div className="flex gap-0.5">
                                     <button className="flex-1 py-0.5 text-[7px] font-medium border" style={{ borderRadius: "0.75rem", background: "transparent", color: "#FFFFFF", borderColor: "rgba(255,255,255,0.5)" }}>История</button>
@@ -2033,7 +1986,7 @@ export default function PsychologistLandingUpmini() {
                               <div className="flex flex-col items-center text-center mb-1">
                                 <div className="h-6 w-6 rounded-full border mb-0.5 shrink-0" style={{ borderColor: "rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.1)" }} />
                                 <div className="text-[8px] font-semibold mb-0.5" style={{ color: "#FFFFFF" }}>Имя Клиента</div>
-                                <div className="text-[7px] leading-relaxed px-0.5" style={{ color: "rgba(255,255,255,0.7)" }}>Нужна повторная консультация</div>
+                                <div className="text-[7px] leading-relaxed px-0.5" style={{ color: "rgba(255,255,255,0.7)" }}>Нужна повторная консультация: важно разобрать прогресс и скорректировать домашние шаги.</div>
                               </div>
                               <div className="flex gap-0.5">
                                 <button className="flex-1 py-0.5 text-[7px] font-medium border" style={{ borderRadius: "0.75rem", background: "transparent", color: "#FFFFFF", borderColor: "rgba(255,255,255,0.5)" }}>История</button>
@@ -2156,7 +2109,7 @@ export default function PsychologistLandingUpmini() {
                             </div>
 
                             {/* Карточки выбора */}
-                            <div className="border p-0.5" style={{ borderRadius: "0.75rem", borderColor: "rgba(58, 65, 50, 0.3)", paddingTop: "calc(0.125rem + 1px)", paddingBottom: "calc(0.125rem + 1px)" }}>
+                            <div className="p-0">
                               <div className="text-[8px] font-semibold mb-0.5" style={{ color: PALETTE.text }}>С чего начнём?</div>
                               <div className="text-[7px] mb-1" style={{ color: PALETTE.muted }}>Выберите способ</div>
                               <div className="grid grid-cols-2 gap-0.5">
@@ -2182,7 +2135,7 @@ export default function PsychologistLandingUpmini() {
                                   <div className="flex flex-col items-start justify-between h-full min-h-[30px]">
                                     <div className="flex items-center justify-between w-full mb-auto">
                                       <div className="text-[7px] font-semibold text-left" style={{ color: "#13273F" }}>
-                                        Выбрать эксперта
+                                        Выбрать специалиста
                                       </div>
                                        <div
                                          className="h-2.5 w-2.5 rounded-full border flex items-center justify-center shrink-0"
@@ -2195,7 +2148,49 @@ export default function PsychologistLandingUpmini() {
                                        </div>
                                      </div>
                                    </div>
-                                 </button>
+                                </button>
+                              </div>
+                            </div>
+
+                            <div className="p-0">
+                              <div className="text-[8px] font-semibold mb-0.5" style={{ color: PALETTE.text }}>Разделы для Вас</div>
+                              <div className="grid grid-cols-12 gap-0.5">
+                                <button className="col-span-7 border p-0.5" style={{ borderRadius: "0.75rem", borderWidth: "0.5px", borderColor: "rgba(255,255,255,0.2)", background: "#13273F", minHeight: "2.5rem" }}>
+                                  <div className="text-center">
+                                    <div className="text-[7px] font-semibold" style={{ color: "#FFFFFF" }}>Домашние задания</div>
+                                    <div className="text-[7px]" style={{ color: "rgba(255,255,255,0.75)" }}>Получайте и сдавайте</div>
+                                  </div>
+                                </button>
+                                <button className="col-span-5 border p-0.5" style={{ borderRadius: "0.75rem", borderWidth: "0.5px", borderColor: "rgba(255,255,255,0.2)", background: "#13273F", minHeight: "2.5rem" }}>
+                                  <div className="text-center">
+                                    <div className="text-[7px] font-semibold" style={{ color: "#FFFFFF" }}>История встреч</div>
+                                    <div className="text-[7px]" style={{ color: "rgba(255,255,255,0.75)" }}>Конспекты, фидбэк</div>
+                                  </div>
+                                </button>
+                                <button className="col-span-12 border p-0.5" style={{ borderRadius: "0.75rem", borderWidth: "0.5px", borderColor: "rgba(255,255,255,0.2)", background: "#13273F", minHeight: "2.5rem" }}>
+                                  <div className="text-center">
+                                    <div className="text-[7px] font-semibold" style={{ color: "#FFFFFF" }}>Моё расписание</div>
+                                    <div className="text-[7px]" style={{ color: "rgba(255,255,255,0.75)" }}>Ближайшие встречи и даты</div>
+                                  </div>
+                                </button>
+                                <button className="col-span-6 border p-0.5" style={{ borderRadius: "0.75rem", borderWidth: "0.5px", borderColor: "rgba(255,255,255,0.2)", background: "#13273F", minHeight: "2.5rem" }}>
+                                  <div className="text-center">
+                                    <div className="text-[7px] font-semibold" style={{ color: "#FFFFFF" }}>Справочник</div>
+                                    <div className="text-[7px]" style={{ color: "rgba(255,255,255,0.75)" }}>Контакты</div>
+                                  </div>
+                                </button>
+                                <button className="col-span-6 border p-0.5" style={{ borderRadius: "0.75rem", borderWidth: "0.5px", borderColor: "rgba(255,255,255,0.2)", background: "#13273F", minHeight: "2.5rem" }}>
+                                  <div className="text-center">
+                                    <div className="text-[7px] font-semibold" style={{ color: "#FFFFFF" }}>Статистика и прогресс</div>
+                                    <div className="text-[7px]" style={{ color: "rgba(255,255,255,0.75)" }}>Сводка встреч</div>
+                                  </div>
+                                </button>
+                                <button className="col-span-12 border p-0.5" style={{ borderRadius: "0.75rem", borderWidth: "0.5px", borderColor: "rgba(255,255,255,0.2)", background: "#13273F", minHeight: "2.5rem" }}>
+                                  <div className="text-center">
+                                    <div className="text-[7px] font-semibold" style={{ color: "#FFFFFF" }}>Тарифы и пакеты</div>
+                                    <div className="text-[7px]" style={{ color: "rgba(255,255,255,0.75)" }}>Покупка и остаток встреч</div>
+                                  </div>
+                                </button>
                               </div>
                             </div>
 
@@ -2210,20 +2205,20 @@ export default function PsychologistLandingUpmini() {
                                 <div className="flex-1">
                                   <div className="text-[8px] font-semibold mb-0.5" style={{ color: "rgb(0, 0, 0)" }}>15 ноя, 14:00</div>
                                   <div className="text-[7px] mb-0.5" style={{ color: "rgba(0, 0, 0, 0.7)" }}>Консультация</div>
-                                  <div className="inline-block px-1 py-0.5 rounded text-[7px]" style={{ background: "rgba(128, 128, 128, 0.1)", color: "rgba(0, 0, 0, 0.8)" }}>Эксперт - Алина</div>
+                                  <div className="inline-block px-1 py-0.5 rounded text-[7px]" style={{ background: "rgba(128, 128, 128, 0.1)", color: "rgba(0, 0, 0, 0.8)" }}>Алина</div>
                                 </div>
                                 <div className="h-5 w-5 rounded-full border shrink-0" style={{ borderColor: "rgba(0, 0, 0, 0.1)", background: "rgba(139, 115, 85, 0.15)" }} />
                               </div>
                               <div className="flex flex-col gap-0.5 mb-0.5">
                                 <div className="flex gap-0.5">
-                                  <button className="flex-1 border py-0.5 px-0.5 text-[7px] font-medium" style={{ borderRadius: "1rem", borderColor: "rgba(0, 0, 0, 0.2)", background: "rgba(255, 255, 255, 0.5)", color: "rgba(0, 0, 0, 0.8)" }}>Перенести</button>
-                                  <button className="flex-1 border py-0.5 px-0.5 text-[7px] font-medium" style={{ borderRadius: "1rem", borderColor: "rgba(0, 0, 0, 0.2)", background: "rgba(255, 255, 255, 0.5)", color: "rgba(0, 0, 0, 0.8)" }}>Отменить</button>
+                                  <button className="flex-1 border py-0.5 px-0.5 text-[7px] font-medium" style={{ borderRadius: "1rem", borderColor: "rgba(19, 39, 63, 0.2)", background: "#13273F", color: "#FFFFFF" }}>Перенести</button>
+                                  <button className="flex-1 border py-0.5 px-0.5 text-[7px] font-medium" style={{ borderRadius: "1rem", borderColor: "rgba(19, 39, 63, 0.2)", background: "#13273F", color: "#FFFFFF" }}>Отмена</button>
                                 </div>
-                                <button className="w-full border py-0.5 px-0.5 text-[7px] font-medium" style={{ borderRadius: "1rem", borderColor: "rgba(0, 0, 0, 0.2)", background: "rgba(255, 255, 255, 0.5)", color: "rgba(0, 0, 0, 0.8)" }}>Написать преподавателю</button>
+                                <button className="w-full border py-0.5 px-0.5 text-[7px] font-medium" style={{ borderRadius: "1rem", borderColor: "rgba(19, 39, 63, 0.2)", background: "#13273F", color: "#FFFFFF" }}>Написать специалисту</button>
                               </div>
                               <div className="flex items-center gap-0.5">
-                                <input type="text" readOnly value="https://meet.example.com/abc123" className="flex-1 px-1 py-0.5 text-[7px]" style={{ borderRadius: "1rem", color: "rgba(0, 0, 0, 0.8)", border: "1px solid rgba(0, 0, 0, 0.2)", background: "rgba(255, 255, 255, 0.5)", outline: "none" }} />
-                                <button className="p-0.5 transition-all duration-200 flex items-center justify-center" style={{ borderRadius: "1rem", color: "rgba(0, 0, 0, 0.8)", background: "rgba(255, 255, 255, 0.5)", border: "1px solid rgba(0, 0, 0, 0.2)", outline: "none" }} title="Копировать">
+                                <input type="text" readOnly value="https://meet.example.com/abc123" className="flex-1 px-1 py-0.5 text-[7px]" style={{ borderRadius: "1rem", color: "rgba(0, 0, 0, 0.8)", border: "1px solid rgba(0, 0, 0, 0.2)", background: "#F8F9FA", outline: "none" }} />
+                                <button className="p-0.5 transition-all duration-200 flex items-center justify-center" style={{ borderRadius: "1rem", color: "rgba(0, 0, 0, 0.8)", background: "#FFFFFF", border: "1px solid #D1D5DB", outline: "none" }} title="Копировать">
                                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -2246,7 +2241,7 @@ export default function PsychologistLandingUpmini() {
                                       <div className="flex-1">
                                         <div className="text-[8px] font-semibold mb-0.5" style={{ color: "rgb(0, 0, 0)" }}>5 окт, 11:30</div>
                                         <div className="text-[7px] mb-0.5" style={{ color: "rgba(0, 0, 0, 0.7)" }}>Консультация</div>
-                                        <div className="inline-block px-1 py-0.5 rounded text-[7px]" style={{ background: "rgba(128, 128, 128, 0.1)", color: "rgba(0, 0, 0, 0.8)" }}>Эксперт - Алина</div>
+                                        <div className="inline-block px-1 py-0.5 rounded text-[7px]" style={{ background: "rgba(128, 128, 128, 0.1)", color: "rgba(0, 0, 0, 0.8)" }}>Алина</div>
                                       </div>
                                       <div className="h-5 w-5 rounded-full border shrink-0" style={{ borderColor: "rgba(0, 0, 0, 0.1)", background: "rgba(139, 115, 85, 0.15)" }} />
                                     </div>
@@ -2259,7 +2254,7 @@ export default function PsychologistLandingUpmini() {
                                       <div className="flex-1">
                                         <div className="text-[8px] font-semibold mb-0.5" style={{ color: "rgb(0, 0, 0)" }}>4 окт, 21:00</div>
                                         <div className="text-[7px] mb-0.5" style={{ color: "rgba(0, 0, 0, 0.7)" }}>Консультация</div>
-                                        <div className="inline-block px-1 py-0.5 rounded text-[7px]" style={{ background: "rgba(128, 128, 128, 0.1)", color: "rgba(0, 0, 0, 0.8)" }}>Эксперт - Алина</div>
+                                        <div className="inline-block px-1 py-0.5 rounded text-[7px]" style={{ background: "rgba(128, 128, 128, 0.1)", color: "rgba(0, 0, 0, 0.8)" }}>Алина</div>
                                       </div>
                                       <div className="h-5 w-5 rounded-full border shrink-0" style={{ borderColor: "rgba(0, 0, 0, 0.1)", background: "rgba(139, 115, 85, 0.15)" }} />
                                     </div>
@@ -2289,6 +2284,7 @@ export default function PsychologistLandingUpmini() {
                         ["Переносы", "отмены", "пустые слоты", "за час до сессии", "деньги не получены"],
                         ["Оплата", "отдельный квест", "вручную"],
                         ["Файлы", "обратная связь", "теряются", "сложно найти", "систематизировать"],
+                        ["сводки по сессиям"],
                       ];
                       
                       const highlightText = (text, words) => {
@@ -2432,7 +2428,7 @@ export default function PsychologistLandingUpmini() {
                                 <line x1="18" y1="6" x2="6" y2="18"></line>
                                 <line x1="6" y1="6" x2="18" y2="18"></line>
                               </svg>
-                              Close
+                              
                             </button>
                             <button
                               className="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium transition-all duration-200"
@@ -2466,7 +2462,7 @@ export default function PsychologistLandingUpmini() {
                               <div>
                                 <div className="text-xs font-semibold" style={{ color: "#000000" }}>Психолог</div>
                                 <div className="text-[10px]" style={{ color: "rgba(0,0,0,0.6)" }}>
-                                  запись • предоплата • напоминания
+                                  запись • слоты • аналитика
                                 </div>
                               </div>
                             </div>
@@ -2476,7 +2472,7 @@ export default function PsychologistLandingUpmini() {
                             <div className="border p-2 flex flex-col h-full"
                                  style={{ borderRadius: "1.5rem", borderColor: "rgba(0,0,0,0.12)", background: "#13273F" }}>
                               <div className="text-[9px] h-[0.875rem]" style={{ color: "rgba(255,255,255,0.6)" }}>
-                                ближайшее окно
+                                ближайшая запись
                               </div>
                               <div className="mt-2 text-xs font-semibold min-h-[2rem] leading-tight" style={{ color: "#FFFFFF" }}>Сегодня 18:30</div>
                               <div className="mt-1 flex flex-wrap gap-1 min-h-[1.5rem]">
@@ -2498,12 +2494,12 @@ export default function PsychologistLandingUpmini() {
                             <div className="border p-2 flex flex-col h-full"
                                  style={{ borderRadius: "1.5rem", borderColor: "rgba(0,0,0,0.12)", background: "#13273F" }}>
                               <div className="text-[9px] h-[0.875rem]" style={{ color: "rgba(255,255,255,0.6)" }}>
-                                напоминание
+                                обратная связь
                               </div>
-                              <div className="mt-2 text-xs font-semibold min-h-[2rem] leading-tight" style={{ color: "#FFFFFF" }}>за 2 часа</div>
-                              <div className="mt-1 text-[9px] leading-relaxed min-h-[1.5rem]" style={{ color: "rgba(255,255,255,0.7)" }}>
-                                Авто-уведомление клиенту и вам.
-                              </div>
+                              <div className="mt-2 text-xs font-semibold min-h-[2rem] leading-tight" style={{ color: "#FFFFFF" }}>3 ответа</div>
+                              <button className="mt-1 px-2 py-0.5 text-[9px] border w-fit" style={{ borderRadius: "0.75rem", color: "#FFFFFF", borderColor: "rgba(255,255,255,0.4)" }}>
+                                Смотреть ответы
+                              </button>
                             </div>
                           </div>
 
@@ -2522,9 +2518,30 @@ export default function PsychologistLandingUpmini() {
                             </button>
                           </div>
 
-                          <div className="mt-1.5 grid grid-cols-12 gap-1">
+                          <div className="mt-1.5">
+                            <button className="w-full border-2 transition-all duration-200 cursor-pointer" style={{ borderRadius: "1.5rem", background: "#FFFFFF", borderColor: "#13273F" }}>
+                              <div className="relative flex items-center justify-center p-2.5">
+                                <div className="text-center">
+                                  <div className="text-[10px] font-medium" style={{ color: "#13273F" }}>
+                                    Назначить консультацию вручную
+                                  </div>
+                                  <div className="mt-0 text-[9px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>
+                                    Создайте консультацию для клиента вручную
+                                  </div>
+                                </div>
+                              </div>
+                            </button>
+                          </div>
+
+                          <div className="mt-1.5 px-0.5">
+                            <div className="text-[10px] font-semibold" style={{ color: "rgba(19, 39, 63, 0.75)" }}>
+                              Контроль и аналитика
+                            </div>
+                          </div>
+
+                          <div className="mt-1.5 grid grid-cols-2 gap-1">
                             <button
-                              className="col-span-7 relative overflow-hidden border-2 transition-all duration-200 cursor-pointer"
+                              className="relative overflow-hidden border-2 transition-all duration-200 cursor-pointer"
                               style={{
                                 borderRadius: "1.5rem",
                                 background: "#FFFFFF",
@@ -2534,16 +2551,16 @@ export default function PsychologistLandingUpmini() {
                               <div className="relative flex aspect-[16/10] items-center justify-center p-2.5">
                                 <div className="text-center">
                                   <div className="text-[10px] font-medium" style={{ color: "#13273F" }}>
-                                    Статистика
+                                    Календарь
                                   </div>
                                   <div className="mt-0 text-[9px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>
-                                    Доходы, количество сессий, графики
+                                    Расписание и свободные окна
                                   </div>
                                 </div>
                               </div>
                             </button>
                             <button
-                              className="col-span-5 relative overflow-hidden border-2 transition-all duration-200 cursor-pointer"
+                              className="relative overflow-hidden border-2 transition-all duration-200 cursor-pointer"
                               style={{
                                 borderRadius: "1.5rem",
                                 background: "#FFFFFF",
@@ -2551,6 +2568,28 @@ export default function PsychologistLandingUpmini() {
                               }}
                             >
                               <div className="relative flex aspect-[16/10] items-center justify-center p-2.5">
+                                <div className="text-center">
+                                  <div className="text-[10px] font-medium" style={{ color: "#13273F" }}>
+                                    Справочник
+                                  </div>
+                                  <div className="mt-0 text-[9px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>
+                                    Список всех клиентов
+                                  </div>
+                                </div>
+                              </div>
+                            </button>
+                          </div>
+
+                          <div className="mt-1.5 grid grid-cols-2 gap-1">
+                            <button
+                              className="relative overflow-hidden border-2 transition-all duration-200 cursor-pointer"
+                              style={{
+                                borderRadius: "1.5rem",
+                                background: "#FFFFFF",
+                                borderColor: "#13273F",
+                              }}
+                            >
+                              <div className="relative flex items-center justify-center p-2.5">
                                 <div className="text-center">
                                   <div className="text-[10px] font-medium" style={{ color: "#13273F" }}>
                                     История
@@ -2561,11 +2600,8 @@ export default function PsychologistLandingUpmini() {
                                 </div>
                               </div>
                             </button>
-                          </div>
-
-                          <div className="mt-1.5">
                             <button
-                              className="w-full relative overflow-hidden border-2 transition-all duration-200 cursor-pointer"
+                              className="relative overflow-hidden border-2 transition-all duration-200 cursor-pointer"
                               style={{
                                 borderRadius: "1.5rem",
                                 background: "#FFFFFF",
@@ -2575,10 +2611,10 @@ export default function PsychologistLandingUpmini() {
                               <div className="relative flex items-center justify-center p-2.5">
                                 <div className="text-center">
                                   <div className="text-[10px] font-medium" style={{ color: "#13273F" }}>
-                                    Справочник
+                                    Аналитика
                                   </div>
                                   <div className="mt-0 text-[9px]" style={{ color: "rgba(19, 39, 63, 0.6)" }}>
-                                    Список всех клиентов специалиста
+                                    Нагрузка, доходы, динамика встреч
                                   </div>
                                 </div>
                               </div>
@@ -2888,7 +2924,7 @@ export default function PsychologistLandingUpmini() {
                             <line x1="18" y1="6" x2="6" y2="18"></line>
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                           </svg>
-                          Close
+                          
                         </button>
                         <button
                           className="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium transition-all duration-200"
@@ -2986,11 +3022,7 @@ export default function PsychologistLandingUpmini() {
                         </div>
 
                         {/* Средняя часть - Карточки выбора */}
-                        <div className="border p-2"
-                             style={{
-                               borderRadius: "1.5rem",
-                               borderColor: "rgba(58, 65, 50, 0.3)",
-                             }}>
+                        <div className="p-0">
                           <div className="text-[10px] font-semibold mb-1" style={{ color: PALETTE.text }}>
                             С чего начнём?
                           </div>
@@ -3040,7 +3072,7 @@ export default function PsychologistLandingUpmini() {
                               <div className="flex flex-col items-start justify-between h-full min-h-[50px]">
                                 <div className="flex items-center justify-between w-full mb-auto">
                                   <div className="text-[9px] font-semibold text-left" style={{ color: "#13273F" }}>
-                                    Выбрать эксперта
+                                    Выбрать специалиста
                                   </div>
                                   <div
                                     className="h-4 w-4 rounded-full border flex items-center justify-center shrink-0"
@@ -3052,6 +3084,53 @@ export default function PsychologistLandingUpmini() {
                                     <span className="text-[10px]" style={{ color: "rgb(255, 255, 255)" }}>→</span>
                                   </div>
                                 </div>
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div className="p-0">
+                          <div className="mb-1.5">
+                            <div className="text-[10px] font-semibold" style={{ color: PALETTE.text }}>
+                              Разделы для Вас
+                            </div>
+                          </div>
+
+                          <div className="grid grid-cols-12 gap-1.5">
+                            <button className="col-span-7 border p-2" style={{ borderRadius: "1.25rem", borderWidth: "0.5px", borderColor: "rgba(255,255,255,0.2)", background: "#13273F" }}>
+                              <div className="text-center">
+                                <div className="text-[9px] font-semibold" style={{ color: "#FFFFFF" }}>Домашние задания</div>
+                                <div className="text-[8px] mt-0.5" style={{ color: "rgba(255,255,255,0.75)" }}>Получайте и сдавайте задания</div>
+                              </div>
+                            </button>
+                            <button className="col-span-5 border p-2" style={{ borderRadius: "1.25rem", borderWidth: "0.5px", borderColor: "rgba(255,255,255,0.2)", background: "#13273F" }}>
+                              <div className="text-center">
+                                <div className="text-[9px] font-semibold" style={{ color: "#FFFFFF" }}>История встреч</div>
+                                <div className="text-[8px] mt-0.5" style={{ color: "rgba(255,255,255,0.75)" }}>Конспекты, фидбэк и оплата</div>
+                              </div>
+                            </button>
+                            <button className="col-span-12 border p-2" style={{ borderRadius: "1.25rem", borderWidth: "0.5px", borderColor: "rgba(255,255,255,0.2)", background: "#13273F" }}>
+                              <div className="text-center">
+                                <div className="text-[9px] font-semibold" style={{ color: "#FFFFFF" }}>Моё расписание</div>
+                                <div className="text-[8px] mt-0.5" style={{ color: "rgba(255,255,255,0.75)" }}>Ближайшие встречи и даты</div>
+                              </div>
+                            </button>
+                            <button className="col-span-6 border p-2" style={{ borderRadius: "1.25rem", borderWidth: "0.5px", borderColor: "rgba(255,255,255,0.2)", background: "#13273F" }}>
+                              <div className="text-center">
+                                <div className="text-[9px] font-semibold" style={{ color: "#FFFFFF" }}>Справочник</div>
+                                <div className="text-[8px] mt-0.5" style={{ color: "rgba(255,255,255,0.75)" }}>Контакты специалистов и менеджеров</div>
+                              </div>
+                            </button>
+                            <button className="col-span-6 border p-2" style={{ borderRadius: "1.25rem", borderWidth: "0.5px", borderColor: "rgba(255,255,255,0.2)", background: "#13273F" }}>
+                              <div className="text-center">
+                                <div className="text-[9px] font-semibold" style={{ color: "#FFFFFF" }}>Статистика и прогресс</div>
+                                <div className="text-[8px] mt-0.5" style={{ color: "rgba(255,255,255,0.75)" }}>Сводка встреч и заданий</div>
+                              </div>
+                            </button>
+                            <button className="col-span-12 border p-2" style={{ borderRadius: "1.25rem", borderWidth: "0.5px", borderColor: "rgba(255,255,255,0.2)", background: "#13273F" }}>
+                              <div className="text-center">
+                                <div className="text-[9px] font-semibold" style={{ color: "#FFFFFF" }}>Тарифы и пакеты</div>
+                                <div className="text-[8px] mt-0.5" style={{ color: "rgba(255,255,255,0.75)" }}>Покупка и остаток встреч</div>
                               </div>
                             </button>
                           </div>
@@ -3093,7 +3172,7 @@ export default function PsychologistLandingUpmini() {
                                          background: "rgba(128, 128, 128, 0.1)",
                                          color: "rgba(0, 0, 0, 0.8)",
                                        }}>
-                                    Эксперт - Алина Игнатова
+                                    Алина Игнатова
                                   </div>
                                 </div>
                                 <div
@@ -3111,9 +3190,9 @@ export default function PsychologistLandingUpmini() {
                                     className="flex-1 border py-1 px-1.5 text-[9px] font-medium transition-all duration-200 hover:opacity-90"
                                     style={{
                                       borderRadius: "1rem",
-                                      borderColor: "rgba(0, 0, 0, 0.2)",
-                                      background: "rgba(255, 255, 255, 0.5)",
-                                      color: "rgba(0, 0, 0, 0.8)",
+                                      borderColor: "rgba(19, 39, 63, 0.2)",
+                                      background: "#13273F",
+                                      color: "#FFFFFF",
                                     }}
                                   >
                                     Перенести
@@ -3122,24 +3201,24 @@ export default function PsychologistLandingUpmini() {
                                     className="flex-1 border py-1 px-1.5 text-[9px] font-medium transition-all duration-200 hover:opacity-90"
                                     style={{
                                       borderRadius: "1rem",
-                                      borderColor: "rgba(0, 0, 0, 0.2)",
-                                      background: "rgba(255, 255, 255, 0.5)",
-                                      color: "rgba(0, 0, 0, 0.8)",
+                                      borderColor: "rgba(19, 39, 63, 0.2)",
+                                      background: "#13273F",
+                                      color: "#FFFFFF",
                                     }}
                                   >
-                                    Отменить
+                                    Отмена
                                   </button>
                                 </div>
                                 <button
                                   className="w-full border py-1 px-1.5 text-[9px] font-medium transition-all duration-200 hover:opacity-90"
                                   style={{
                                     borderRadius: "1rem",
-                                    borderColor: "rgba(0, 0, 0, 0.2)",
-                                    background: "rgba(255, 255, 255, 0.5)",
-                                    color: "rgba(0, 0, 0, 0.8)",
+                                    borderColor: "rgba(19, 39, 63, 0.2)",
+                                    background: "#13273F",
+                                    color: "#FFFFFF",
                                   }}
                                 >
-                                  Написать преподавателю
+                                  Написать специалисту
                                 </button>
                               </div>
                               <div className="flex items-center gap-1">
@@ -3152,7 +3231,7 @@ export default function PsychologistLandingUpmini() {
                                     borderRadius: "0.75rem",
                                     color: "rgba(0, 0, 0, 0.8)",
                                     border: "1px solid rgba(0, 0, 0, 0.2)",
-                                    background: "rgba(255, 255, 255, 0.5)",
+                                    background: "#F8F9FA",
                                     outline: "none",
                                   }}
                                 />
@@ -3161,8 +3240,8 @@ export default function PsychologistLandingUpmini() {
                                   style={{
                                     borderRadius: "0.75rem",
                                     color: "rgba(0, 0, 0, 0.8)",
-                                    background: "rgba(255, 255, 255, 0.5)",
-                                    border: "1px solid rgba(0, 0, 0, 0.2)",
+                                    background: "#FFFFFF",
+                                    border: "1px solid #D1D5DB",
                                     outline: "none",
                                   }}
                                   title="Копировать"
@@ -3214,7 +3293,7 @@ export default function PsychologistLandingUpmini() {
                                          background: "rgba(128, 128, 128, 0.1)",
                                          color: "rgba(0, 0, 0, 0.8)",
                                        }}>
-                                    Эксперт - Алина Игнатова
+                                    Алина Игнатова
                                   </div>
                                 </div>
                                 <div
@@ -3250,7 +3329,7 @@ export default function PsychologistLandingUpmini() {
                                          background: "rgba(128, 128, 128, 0.1)",
                                          color: "rgba(0, 0, 0, 0.8)",
                                        }}>
-                                    Эксперт - Алина Игнатова
+                                    Алина Игнатова
                                   </div>
                                 </div>
                                 <div
@@ -3271,21 +3350,69 @@ export default function PsychologistLandingUpmini() {
                     </div>
                   </div>
                 </div>
+
+                {/* Сессии под контролем - под миниаппами на PC */}
+                <div className="mt-6 hidden lg:block">
+                  <div
+                    className={cn(
+                      "relative overflow-hidden rounded-3xl border shadow-[0_24px_80px_rgba(0,0,0,0.45)] p-5 md:p-7"
+                    )}
+                    style={{
+                      background: "linear-gradient(rgba(19, 39, 63, 0.15), rgba(19, 39, 63, 0.1))",
+                      borderColor: "rgba(19, 39, 63, 0.2)",
+                      boxShadow: "rgba(19, 39, 63, 0.2) 0px 28px 90px",
+                      backdropFilter: "blur(18px)",
+                      WebkitBackdropFilter: "blur(18px)",
+                    }}
+                  >
+                    <div className="pointer-events-none absolute inset-0 opacity-60" style={{
+                      background: "radial-gradient(800px 400px at 30% 10%, rgba(255, 255, 255, 0.1), transparent 60%), radial-gradient(700px 400px at 80% 30%, rgba(255, 255, 255, 0.06), transparent 60%)",
+                    }}></div>
+                    <div className="pointer-events-none absolute inset-[1px] rounded-[22px]" style={{
+                      border: "1px solid rgba(19, 39, 63, 0.3)",
+                      opacity: 0.5,
+                    }}></div>
+                    <div className="relative">
+                      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                        <div className="max-w-3xl">
+                          <div className="text-base md:text-lg font-semibold" style={{ color: "rgba(19, 39, 63, 0.95)" }}>
+                            Сессии под контролем: запись, оплата, напоминания в ТГ или Max
+                          </div>
+                          <div className="mt-2 text-sm md:text-base" style={{ color: "rgba(19, 39, 63, 0.7)" }}>
+                            Цифровой продукт для психолога: клиенты сами записываются и оплачивают (по необходимости), а специалист настраивает расписание и данные, которые получает от клиента, отслеживает историю и загрузку в одном месте.
+                          </div>
+                        </div>
+                        <button
+                          onClick={() => scrollToId("cta")}
+                          className="group inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm md:text-base font-medium border transition-transform active:scale-[0.99]"
+                          style={{
+                            color: "#FFFFFF",
+                            background: "linear-gradient(rgb(107, 26, 26), rgb(78, 0, 0))",
+                            borderColor: "rgba(78, 0, 0, 0.6)",
+                            boxShadow: "rgba(78, 0, 0, 0.4) 0px 18px 60px, rgba(255, 255, 255, 0.2) 0px 1px 0px inset",
+                          }}
+                        >
+                          <span>Протестировать 14 дней</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
         </div>
 
-        {/* Sub-hero line */}
-        <div className="mt-14 md:mt-20 mx-auto max-w-7xl">
+        {/* Sub-hero line - для мобильных */}
+        <div className="mt-14 md:mt-20 mx-auto max-w-7xl lg:hidden">
               <GlassCard className="p-5 md:p-7">
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                   <div className="max-w-3xl">
-                  <div className="text-sm font-semibold" style={{ color: PALETTE.text }}>
+                  <div className="text-base md:text-lg font-semibold" style={{ color: PALETTE.text }}>
                     Сессии под контролем: запись, оплата, напоминания в ТГ или Max
                   </div>
                   <div className="mt-2 text-sm md:text-base" style={{ color: PALETTE.muted }}>
-                    Мини-приложение для психолога: клиенты сами выбирают время, вносят предоплату и получают напоминания.
+                    Цифровой продукт для психолога: клиенты сами записываются и оплачивают (по необходимости), а специалист настраивает расписание и данные, которые получает от клиента, отслеживает историю и загрузку в одном месте.
                   </div>
                   </div>
                   <PrimaryButton onClick={() => scrollToId("cta")}>Протестировать 14 дней</PrimaryButton>
@@ -3483,10 +3610,10 @@ export default function PsychologistLandingUpmini() {
                   ))}
                 </div>
 
-                <div className="mt-5 flex flex-col sm:flex-row gap-3">
+                <div className="mt-5 flex flex-col sm:flex-row gap-3 relative z-10">
                   <button
                     onClick={() => scrollToId("cta")}
-                    className="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm md:text-base font-medium border transition-all duration-200"
+                    className="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm md:text-base font-medium border transition-all duration-200 relative z-10"
                     style={{
                       color: "#FFFFFF",
                       background: "#4E0000",
@@ -3498,7 +3625,9 @@ export default function PsychologistLandingUpmini() {
                   >
                     Создать кабинет
                   </button>
-                  <GhostButton onClick={() => scrollToId("pricing")}>Посмотреть тариф</GhostButton>
+                  <div className="relative z-10">
+                    <GhostButton onClick={() => scrollToId("pricing")}>Посмотреть тариф</GhostButton>
+                  </div>
                 </div>
               </GlassCard>
               </div>
@@ -3856,9 +3985,9 @@ export default function PsychologistLandingUpmini() {
 
             {/* Final CTA + Contact */}
             <section id="cta" className="mx-auto max-w-7xl pt-14 md:pt-20 pb-16">
-              <GlassCard className="p-6 md:p-10">
+              <div className="p-0">
                 <div className="grid lg:grid-cols-12 gap-8 items-center">
-                  <div className="lg:col-span-7">
+                  <div className="lg:col-span-12">
                     <h2 className="text-2xl md:text-4xl font-semibold tracking-tight">
                   Меньше хаоса, больше сессий
                     </h2>
@@ -3867,16 +3996,16 @@ export default function PsychologistLandingUpmini() {
                     </p>
 
                     {/* Форма для звонка */}
-                    <div className="mt-4 pt-2">
-                      <div className="rounded-2xl border p-5" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "#FFFFFF" }}>
+                    <div className="mt-4 pt-2 grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-4 items-stretch">
+                      <div className="w-full h-full rounded-2xl border p-5" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "#FFFFFF" }}>
                         <div className="text-sm font-semibold mb-4" style={{ color: "#13273F" }}>
                           Мы вам перезвоним
                         </div>
-                        <div className="flex flex-col sm:flex-row gap-3">
+                        <div className="flex flex-col gap-3">
                           <input
                             type="tel"
                             placeholder="+7 (___) ___-__-__"
-                            className="flex-1 px-4 py-3 rounded-2xl border text-sm"
+                            className="w-full px-4 py-3 rounded-2xl border text-sm"
                             style={{
                               borderColor: "rgba(19, 39, 63, 0.2)",
                               background: "#FFFFFF",
@@ -3885,8 +4014,8 @@ export default function PsychologistLandingUpmini() {
                             }}
                           />
                           <button
-                            onClick={() => alert("Подключите действие: открыть Telegram чат")}
-                            className="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm md:text-base font-medium border transition-all duration-200"
+                            onClick={() => window.open("https://t.me/avotaangi", "_blank", "noopener,noreferrer")}
+                            className="w-full inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm font-medium border transition-all duration-200"
                             style={{
                               color: "#13273F",
                               background: "#FFFFFF",
@@ -3897,7 +4026,7 @@ export default function PsychologistLandingUpmini() {
                           </button>
                           <button
                             onClick={() => alert("Подключите действие: отправка формы звонка")}
-                            className="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm md:text-base font-medium border transition-all duration-200"
+                            className="w-full inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm font-medium border transition-all duration-200"
                             style={{
                               color: "#FFFFFF",
                               background: "#13273F",
@@ -3909,13 +4038,30 @@ export default function PsychologistLandingUpmini() {
                           </button>
                         </div>
                       </div>
+
+                      <div className="w-full h-full rounded-2xl border p-5" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(255, 255, 255, 0.75)" }}>
+                        <div className="text-sm font-semibold mb-4" style={{ color: "#13273F" }}>
+                          Как мы помогаем бизнесу
+                        </div>
+                        <div className="min-h-[112px]">
+                          <ul className="text-sm leading-relaxed space-y-1 pl-4 list-disc" style={{ color: "rgba(19, 39, 63, 0.8)" }}>
+                            <li>создание Telegram-бота;</li>
+                            <li>подача заявки для создания MAX-бота и мини-приложения;</li>
+                            <li>подключение конструктора для сборки бота;</li>
+                            <li>подключение мини-приложения «Цифровой кабинет записи на услугу».</li>
+                          </ul>
+                        </div>
+                        <div className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(19, 39, 63, 0.75)" }}>
+                          После заявки отправляем PDF с разбором функций цифрового продукта, включая расчёт эффективности и дополнительные рекомендации по запуску.
+                        </div>
+                      </div>
                     </div>
 
-                    <p className="mt-6 text-sm md:text-base" style={{ color: PALETTE.muted }}>
+                    <p className="mt-4 text-sm md:text-base" style={{ color: PALETTE.muted }}>
                       Или попробуйте самостоятельно
                     </p>
 
-                    <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                    <div className="mt-4 flex flex-col sm:flex-row gap-3">
                       <button
                     onClick={() => alert("Подключите действие: открыть регистрацию/бота")}
                     className="group inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm md:text-base font-medium border transition-transform active:scale-[0.99]"
@@ -3928,62 +4074,147 @@ export default function PsychologistLandingUpmini() {
                   >
                         <span>Создать кабинет</span>
                       </button>
-                      <GhostButton onClick={() => alert("Подключите действие: открыть Telegram чат поддержки")}>
+                      <button
+                        onClick={() => window.open("https://t.me/avotaangi", "_blank", "noopener,noreferrer")}
+                        className="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm md:text-base font-medium border transition-all duration-200 hover:opacity-90"
+                        style={{
+                          color: "#13273F",
+                          background: "rgba(255, 255, 255, 0.92)",
+                          borderColor: "rgba(19, 39, 63, 0.28)",
+                        }}
+                      >
                         Написать в Telegram
-                      </GhostButton>
+                      </button>
                     </div>
 
-                    <div className="mt-6 text-sm" style={{ color: PALETTE.muted2 }}>
+                    <div className="mt-4 text-sm" style={{ color: PALETTE.muted2 }}>
                       Остались вопросы? Напишите нам в Telegram.
                     </div>
-                  </div>
 
-                  <div
-                    className="mt-6 pt-6 border-t flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
-                    style={{ borderColor: "#13273F" }}
-                  >
-                    <div className="flex items-center gap-3">
-                      <svg width="40" height="40" viewBox="0 0 375 376" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M293.831 0H81.1695C36.3408 0 0 36.3465 0 81.1823V293.877C0 338.713 36.3408 375.059 81.1695 375.059H293.831C338.659 375.059 375 338.713 375 293.877V81.1823C375 36.3465 338.659 0 293.831 0Z" fill="#060F30"/>
-                        <path d="M305.819 145.887C303.971 133.565 298.901 123.66 290.656 116.077C282.411 108.494 271.56 104.703 258.15 104.703C244.741 104.703 233.321 108.068 222.707 114.845C212.093 121.622 203.374 131.243 196.551 143.754V107.547H176.412L176.981 207.307C172.859 219.96 165.135 230.766 155.99 238.633C146.323 247.021 135.472 251.239 123.484 251.239C111.496 251.239 102.682 246.879 96.9014 238.159C91.1205 229.439 88.2301 215.695 88.2301 196.833V107.357H67.1914V205.127C67.1914 205.127 67.1914 219.771 69.0394 229.202C70.8874 241.523 75.9575 251.428 84.2024 259.011C92.4473 266.594 103.298 270.385 116.708 270.385C130.118 270.385 141.537 267.02 152.152 260.243C162.197 253.845 170.537 244.841 177.171 233.277L177.36 267.684H198.399V169.535C202.332 155.839 209.108 144.797 218.821 136.361C228.535 127.973 239.339 123.755 251.327 123.755C263.315 123.755 272.129 128.115 277.91 136.835C283.691 145.555 286.581 159.299 286.581 178.161V267.636H307.62V169.867C307.62 169.867 307.62 155.223 305.772 145.792L305.819 145.887Z" fill="#F2F2F2"/>
-                      </svg>
-                      <div className="text-xs" style={{ color: PALETTE.muted2 }}>
-                        © {new Date().getFullYear()} Upmini.app • Кабинет записи для психолога • Telegram / Max
+                    <div
+                      className="mt-4 pt-4 border-t flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+                      style={{ borderColor: "rgba(19, 39, 63, 0.25)" }}
+                    >
+                      <div className="flex items-center gap-5 md:min-w-[560px]">
+                        <svg width="64" height="64" viewBox="0 0 375 376" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M293.831 0H81.1695C36.3408 0 0 36.3465 0 81.1823V293.877C0 338.713 36.3408 375.059 81.1695 375.059H293.831C338.659 375.059 375 338.713 375 293.877V81.1823C375 36.3465 338.659 0 293.831 0Z" fill="#060F30"/>
+                          <path d="M305.819 145.887C303.971 133.565 298.901 123.66 290.656 116.077C282.411 108.494 271.56 104.703 258.15 104.703C244.741 104.703 233.321 108.068 222.707 114.845C212.093 121.622 203.374 131.243 196.551 143.754V107.547H176.412L176.981 207.307C172.859 219.96 165.135 230.766 155.99 238.633C146.323 247.021 135.472 251.239 123.484 251.239C111.496 251.239 102.682 246.879 96.9014 238.159C91.1205 229.439 88.2301 215.695 88.2301 196.833V107.357H67.1914V205.127C67.1914 205.127 67.1914 219.771 69.0394 229.202C70.8874 241.523 75.9575 251.428 84.2024 259.011C92.4473 266.594 103.298 270.385 116.708 270.385C130.118 270.385 141.537 267.02 152.152 260.243C162.197 253.845 170.537 244.841 177.171 233.277L177.36 267.684H198.399V169.535C202.332 155.839 209.108 144.797 218.821 136.361C228.535 127.973 239.339 123.755 251.327 123.755C263.315 123.755 272.129 128.115 277.91 136.835C283.691 145.555 286.581 159.299 286.581 178.161V267.636H307.62V169.867C307.62 169.867 307.62 155.223 305.772 145.792L305.819 145.887Z" fill="#F2F2F2"/>
+                        </svg>
+                        <div className="text-base leading-relaxed" style={{ color: "rgba(19, 39, 63, 0.65)" }}>
+                          © {new Date().getFullYear()} Upmini.app • Кабинет записи для психолога
+                          <br />
+                          Telegram / Max
+                        </div>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2 md:justify-end md:min-w-[620px]">
+                        <button
+                          className="text-xs px-4 py-1 rounded-2xl border transition-all hover:opacity-90"
+                          style={{
+                            color: "#13273F",
+                            borderColor: "rgba(19, 39, 63, 0.22)",
+                            background: "#FFFFFF",
+                          }}
+                          onClick={() => alert("Подключите ссылку: согласие на обработку персональных данных")}
+                        >
+                          Согласие на обработку персональных данных
+                        </button>
+                        <button
+                          className="text-xs px-4 py-1 rounded-2xl border transition-all hover:opacity-90"
+                          style={{
+                            color: "#13273F",
+                            borderColor: "rgba(19, 39, 63, 0.22)",
+                            background: "#FFFFFF",
+                          }}
+                          onClick={() => alert("Подключите ссылку: публичная оферта")}
+                        >
+                          Публичная оферта
+                        </button>
+                        <button
+                          className="text-xs px-4 py-1 rounded-2xl border transition-all hover:opacity-90"
+                          style={{
+                            color: "#13273F",
+                            borderColor: "rgba(19, 39, 63, 0.22)",
+                            background: "#FFFFFF",
+                          }}
+                          onClick={() => alert("Подключите ссылку: условия использования")}
+                        >
+                          Условия использования
+                        </button>
+                        <button
+                          className="text-xs px-4 py-1 rounded-2xl border transition-all hover:opacity-90"
+                          style={{
+                            color: "#13273F",
+                            borderColor: "rgba(19, 39, 63, 0.22)",
+                            background: "#FFFFFF",
+                          }}
+                          onClick={() => alert("Подключите ссылку: политика использования cookies")}
+                        >
+                          Политика использования cookies
+                        </button>
+                        <button
+                          className="text-xs px-4 py-1 rounded-2xl border transition-all hover:opacity-90"
+                          style={{
+                            color: "#13273F",
+                            borderColor: "rgba(19, 39, 63, 0.22)",
+                            background: "#FFFFFF",
+                          }}
+                          onClick={() => alert("Подключите ссылку: политика конфиденциальности")}
+                        >
+                          Политика конфиденциальности
+                        </button>
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap gap-2">
-                      <button
-                        className="text-xs px-4 py-2 rounded-2xl border"
-                        style={{
-                          color: PALETTE.muted,
-                          borderColor: "rgba(255,255,255,0.12)",
-                          background: "rgba(255,255,255,0.04)",
-                        }}
-                        onClick={() => alert("Подключите ссылку: политика конфиденциальности")}
-                      >
-                        Политика конфиденциальности
-                      </button>
-                      <button
-                        className="text-xs px-4 py-2 rounded-2xl border"
-                        style={{
-                          color: PALETTE.muted,
-                          borderColor: "rgba(255,255,255,0.12)",
-                          background: "rgba(255,255,255,0.04)",
-                        }}
-                        onClick={() => alert("Подключите ссылку: оферта")}
-                      >
-                        Оферта
-                      </button>
+                    <div className="mt-3 p-0 grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <div className="text-xs font-semibold leading-relaxed" style={{ color: "rgba(11, 21, 56, 0.82)" }}>
+                          Юридическое лицо
+                        </div>
+                        <div className="mt-3 grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs leading-relaxed" style={{ color: "rgba(11, 21, 56, 0.76)" }}>
+                          <div>
+                            <div>ООО "АПМИНИАПП"</div>
+                            <div>ИНН: 9734021868</div>
+                            <div>КПП: 773401001</div>
+                            <div>ОГРН: 1257700584680</div>
+                          </div>
+                          <div>
+                            <div>Р/счет №: 40702810520000275343</div>
+                            <div>Банк: ООО "Банк Точка" г.Москва</div>
+                            <div>БИК: 044525104</div>
+                            <div>К/счет: 30101810745374525104</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div className="text-xs font-semibold leading-relaxed" style={{ color: "rgba(11, 21, 56, 0.82)" }}>
+                          Контакты
+                        </div>
+                        <div className="mt-3 text-xs leading-relaxed" style={{ color: "rgba(11, 21, 56, 0.76)" }}>
+                          <div>123308, РОССИЯ, Г МОСКВА, УЛ 3-Я ХОРОШЁВСКАЯ, ДОМ 2, КОРПУС СТР. 1, ОФ ПОМЕЩ. 115/3</div>
+                          <div>Email: info@upmini.app</div>
+                          <div>
+                            Telegram:{" "}
+                            <button
+                              className="underline underline-offset-2"
+                              onClick={() => window.open("https://t.me/avotaangi", "_blank", "noopener,noreferrer")}
+                              style={{ color: "rgba(11, 21, 56, 0.82)" }}
+                            >
+                              @avotaangi
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+
                   </div>
+
                 </div>
-              </GlassCard>
+              </div>
             </section>
         </div>
       </main>
     </div>
   );
 }
-
-
