@@ -16,19 +16,19 @@ const PALETTE = {
   bg: "#FFFFFF",
   panel: "rgba(19, 39, 63, 0.1)",
   panel2: "rgba(19, 39, 63, 0.15)",
-  stroke: "rgba(19, 39, 63, 0.2)",
+  stroke: "rgba(19, 39, 63, 0.1)",
   stroke2: "rgba(19, 39, 63, 0.3)",
   text: "rgba(19, 39, 63, 0.95)",
   muted: "rgba(19, 39, 63, 0.7)",
   muted2: "rgba(19, 39, 63, 0.6)",
   glow: "rgba(78, 0, 0, 0.2)",
-  shadow: "rgba(19, 39, 63, 0.2)",
+  shadow: "rgba(19, 39, 63, 0.1)",
   // Mystic Navy акцент
   blue: "#13273F",
   blueLight: "#1E3A5A",
   blueDark: "#0D1A2A",
   blueGlow: "rgba(19, 39, 63, 0.3)",
-  blueGlowLight: "rgba(19, 39, 63, 0.2)",
+  blueGlowLight: "rgba(19, 39, 63, 0.1)",
   bluePanel: "rgba(19, 39, 63, 0.15)",
   blueBorder: "rgba(19, 39, 63, 0.4)",
   // Red Inferno для CTA
@@ -99,9 +99,9 @@ function Pill({ children, className }) {
         className
       )}
       style={{
-        background: "rgba(107, 126, 61, 0.15)",
-        borderColor: "rgba(107, 126, 61, 0.3)",
-        color: PALETTE.muted,
+        background: "rgba(19, 39, 63, 0.1)",
+        borderColor: "rgba(19, 39, 63, 0.1)",
+        color: "#13273F",
         backdropFilter: "blur(14px)",
         WebkitBackdropFilter: "blur(14px)",
       }}
@@ -223,8 +223,8 @@ function MiniStat({ label, value }) {
     <div
       className="rounded-2xl border px-2 py-2 min-w-0 flex flex-col justify-center"
       style={{
-        background: "rgba(107, 126, 61, 0.12)",
-        borderColor: "rgba(107, 126, 61, 0.3)",
+        background: "rgba(19, 39, 63, 0.1)",
+        borderColor: "rgba(19, 39, 63, 0.1)",
       }}
     >
       <div className="text-xs" style={{ color: PALETTE.muted2 }}>
@@ -303,7 +303,7 @@ function TelegramReminderMessage() {
       <div
         className="relative p-2"
         style={{
-          background: "#E5F4E3",
+          background: "rgba(19, 39, 63, 0.1)",
           minHeight: "100%",
           paddingTop: "1.5rem",
           fontSize: "0.7rem",
@@ -313,7 +313,7 @@ function TelegramReminderMessage() {
         <div
           className="flex items-center justify-between px-1.5 py-1 border-b mb-1.5"
           style={{
-            background: "#E5F4E3",
+            background: "rgba(19, 39, 63, 0.1)",
             borderColor: "rgba(0, 0, 0, 0.08)",
           }}
         >
@@ -431,7 +431,7 @@ function TelegramReminderMessage() {
               </div>
               
               {/* Timestamp */}
-              <div className="mt-0.5 text-[7px] text-right" style={{ color: "rgba(19, 39, 63, 0.5)" }}>
+              <div className="mt-0.5 text-[7px] text-right" style={{ color: "rgba(19, 39, 63, 0.1)" }}>
                 11:13
               </div>
             </div>
@@ -442,7 +442,7 @@ function TelegramReminderMessage() {
         <div
           className="absolute bottom-0 left-0 right-0 px-1.5 py-1 border-t"
           style={{
-            background: "#E5F4E3",
+            background: "rgba(19, 39, 63, 0.1)",
             borderColor: "rgba(0, 0, 0, 0.08)",
           }}
         >
@@ -485,7 +485,7 @@ function MiniAppScreenshot({ type }) {
         className="relative overflow-hidden rounded-3xl border"
         style={{
           background: "#FFFFFF",
-          borderColor: "rgba(19, 39, 63, 0.2)",
+          borderColor: "rgba(19, 39, 63, 0.1)",
         }}
       >
         <div className="relative flex aspect-[16/10] items-center justify-center p-8">
@@ -507,7 +507,7 @@ function MiniAppScreenshot({ type }) {
                     </div>
                   </div>
                 </button>
-                <div className="border p-4" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.2)", background: "#13273F" }}>
+                <div className="border p-4" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.1)", background: "#13273F" }}>
                   <div className="text-xs mb-2" style={{ color: "rgba(255,255,255,0.6)" }}>Выбранное время</div>
                   <div className="text-lg font-semibold" style={{ color: "#FFFFFF" }}>15 января, 14:00</div>
                 </div>
@@ -529,14 +529,14 @@ function MiniAppScreenshot({ type }) {
                 </div>
                 <div className="text-sm font-semibold" style={{ color: PALETTE.text }}>Предоплата</div>
               </div>
-              <div className="border p-4" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.2)", background: "#13273F" }}>
+              <div className="border p-4" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.1)", background: "#13273F" }}>
                 <div className="flex items-center justify-between mb-3">
                   <div>
                     <div className="text-xs mb-1" style={{ color: "rgba(255,255,255,0.6)" }}>Сумма к оплате</div>
                     <div className="text-2xl font-semibold" style={{ color: "#FFFFFF" }}>3 500 ₽</div>
                   </div>
-                  <div className="px-3 py-2 rounded-lg" style={{ background: "rgba(16, 185, 129, 0.2)" }}>
-                    <div className="text-xs font-semibold" style={{ color: "#10B981" }}>Оплачено</div>
+                  <div className="px-3 py-2 rounded-lg" style={{ background: "rgba(19, 39, 63, 0.1)" }}>
+                    <div className="text-xs font-semibold" style={{ color: "#13273F" }}>Оплачено</div>
                   </div>
                 </div>
                 <div className="flex gap-2">
@@ -562,7 +562,7 @@ function MiniAppScreenshot({ type }) {
                 </div>
                 <div className="text-sm font-semibold" style={{ color: PALETTE.text }}>Автоматическое напоминание</div>
               </div>
-              <div className="border p-4" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.2)", background: "#13273F" }}>
+              <div className="border p-4" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.1)", background: "#13273F" }}>
                 <div className="flex items-center gap-3">
                   <div className="h-10 w-10 rounded-full border flex items-center justify-center shrink-0" style={{ borderColor: "rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.1)" }}>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "#FFFFFF" }}>
@@ -587,7 +587,7 @@ function MiniAppScreenshot({ type }) {
         className="relative overflow-hidden rounded-3xl border"
         style={{
           background: "#FFFFFF",
-          borderColor: "rgba(19, 39, 63, 0.2)",
+          borderColor: "rgba(19, 39, 63, 0.1)",
         }}
       >
         <div className="relative flex items-center md:items-stretch justify-center md:justify-start p-4">
@@ -629,7 +629,7 @@ function MiniAppScreenshot({ type }) {
                   </div>
                   <div className="text-xs font-semibold" style={{ color: PALETTE.text }}>Выбранное время</div>
                 </div>
-                <div className="border p-3 flex-1 flex flex-col justify-center" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.2)", background: "#13273F" }}>
+                <div className="border p-3 flex-1 flex flex-col justify-center" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.1)", background: "#13273F" }}>
                   <div className="text-[10px] mb-1.5" style={{ color: "rgba(255,255,255,0.6)" }}>Выбранное время</div>
                   <div className="text-sm font-semibold" style={{ color: "#FFFFFF" }}>15 января, 14:00</div>
                 </div>
@@ -643,14 +643,14 @@ function MiniAppScreenshot({ type }) {
                   </div>
                   <div className="text-xs font-semibold" style={{ color: PALETTE.text }}>Оплата при записи</div>
                 </div>
-                <div className="border p-3 flex-1 flex flex-col" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.2)", background: "#13273F" }}>
+                <div className="border p-3 flex-1 flex flex-col" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.1)", background: "#13273F" }}>
                   <div className="flex items-center justify-between mb-2">
                     <div>
                       <div className="text-[10px] mb-0.5" style={{ color: "rgba(255,255,255,0.6)" }}>Сумма к оплате</div>
                       <div className="text-xl font-semibold" style={{ color: "#FFFFFF" }}>3 500 ₽</div>
                     </div>
-                    <div className="px-2 py-1 rounded-lg" style={{ background: "rgba(16, 185, 129, 0.2)" }}>
-                      <div className="text-[10px] font-semibold" style={{ color: "#10B981" }}>Оплачено</div>
+                    <div className="px-2 py-1 rounded-lg" style={{ background: "rgba(19, 39, 63, 0.1)" }}>
+                      <div className="text-[10px] font-semibold" style={{ color: "#13273F" }}>Оплачено</div>
                     </div>
                   </div>
                   <div className="flex gap-2 mt-auto">
@@ -669,7 +669,7 @@ function MiniAppScreenshot({ type }) {
                   </div>
                   <div className="text-xs font-semibold" style={{ color: PALETTE.text }}>Автоматическое напоминание</div>
                 </div>
-                <div className="border p-3 flex-1 flex flex-col justify-between" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.2)", background: "#13273F" }}>
+                <div className="border p-3 flex-1 flex flex-col justify-between" style={{ borderRadius: "1.25rem", borderColor: "rgba(19, 39, 63, 0.1)", background: "#13273F" }}>
                   <div className="flex items-center gap-2 mb-2">
                     <div className="h-8 w-8 rounded-full border flex items-center justify-center shrink-0" style={{ borderColor: "rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.1)" }}>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "#FFFFFF" }}>
@@ -721,7 +721,7 @@ function MiniAppScreenshot({ type }) {
         className="relative overflow-hidden rounded-3xl border"
         style={{
           background: "#FFFFFF",
-          borderColor: "rgba(19, 39, 63, 0.2)",
+          borderColor: "rgba(19, 39, 63, 0.1)",
         }}
       >
         <div className="relative flex items-center justify-center p-4">
@@ -734,7 +734,7 @@ function MiniAppScreenshot({ type }) {
                 style={{
                   background: activeTab === "alina" ? "#13273F" : "#FFFFFF",
                   color: activeTab === "alina" ? "#FFFFFF" : "rgba(19, 39, 63, 0.7)",
-                  border: activeTab === "alina" ? "none" : "1px solid rgba(19, 39, 63, 0.2)",
+                  border: activeTab === "alina" ? "none" : "1px solid rgba(19, 39, 63, 0.1)",
                   boxShadow: activeTab === "alina" ? "0 2px 8px rgba(19, 39, 63, 0.3)" : "none",
                 }}
               >
@@ -746,7 +746,7 @@ function MiniAppScreenshot({ type }) {
                 style={{
                   background: activeTab === "all" ? "#13273F" : "#FFFFFF",
                   color: activeTab === "all" ? "#FFFFFF" : "rgba(19, 39, 63, 0.7)",
-                  borderColor: "rgba(19, 39, 63, 0.2)",
+                  borderColor: "rgba(19, 39, 63, 0.1)",
                 }}
               >
                 Все доступные
@@ -821,7 +821,7 @@ function MiniAppScreenshot({ type }) {
         className="relative overflow-hidden rounded-3xl border"
         style={{
           background: "#FFFFFF",
-          borderColor: "rgba(19, 39, 63, 0.2)",
+          borderColor: "rgba(19, 39, 63, 0.1)",
         }}
       >
         <div className="relative flex items-center justify-center p-4">
@@ -832,7 +832,7 @@ function MiniAppScreenshot({ type }) {
                   <div className="text-sm font-semibold" style={{ color: "#13273F" }}>15 ноября, 14:00</div>
                   <div className="text-xs mt-0.5" style={{ color: "rgba(19, 39, 63, 0.7)" }}>Специалист: Алина Игнатова</div>
                 </div>
-                <div className="px-2.5 py-1 rounded-full text-xs font-semibold" style={{ background: "rgba(37, 99, 235, 0.12)", color: "#2563EB" }}>
+                <div className="px-2.5 py-1 rounded-full text-xs font-semibold" style={{ background: "rgba(19, 39, 63, 0.1)", color: "#13273F" }}>
                   Новое
                 </div>
               </div>
@@ -844,7 +844,7 @@ function MiniAppScreenshot({ type }) {
                     В течение недели ведите дневник тревожных ситуаций. Записывайте время, место и ваши мысли в момент тревоги.
                   </p>
                   <div className="text-xs" style={{ color: "rgba(19, 39, 63, 0.7)" }}>Дедлайн: 22 ноября 2024</div>
-                  <button className="px-2.5 py-1.5 rounded-lg text-xs" style={{ background: "rgba(37, 99, 235, 0.08)", color: "#2563EB" }}>
+                  <button className="px-2.5 py-1.5 rounded-lg text-xs" style={{ background: "rgba(19, 39, 63, 0.1)", color: "#13273F" }}>
                     Дневник_тревоги.pdf
                   </button>
                 </div>
@@ -854,7 +854,7 @@ function MiniAppScreenshot({ type }) {
                   <textarea
                     className="w-full p-3 rounded-xl border text-sm resize-none"
                     style={{
-                      borderColor: "rgba(19, 39, 63, 0.2)",
+                      borderColor: "rgba(19, 39, 63, 0.1)",
                       background: "#FFFFFF",
                       color: "#13273F",
                       minHeight: "96px",
@@ -866,7 +866,7 @@ function MiniAppScreenshot({ type }) {
                   />
 
                   <div className="space-y-2">
-                    <button className="w-full border p-2 rounded-xl flex items-center justify-center gap-2 transition-all hover:opacity-70" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "#FFFFFF" }}>
+                    <button className="w-full border p-2 rounded-xl flex items-center justify-center gap-2 transition-all hover:opacity-70" style={{ borderColor: "rgba(19, 39, 63, 0.1)", background: "#FFFFFF" }}>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(19, 39, 63, 0.6)" strokeWidth="2">
                         <line x1="12" y1="5" x2="12" y2="19"></line>
                         <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -900,7 +900,7 @@ function MiniAppScreenshot({ type }) {
         className="relative overflow-hidden rounded-3xl border"
         style={{
           background: "#13273F",
-          borderColor: "rgba(19, 39, 63, 0.2)",
+          borderColor: "rgba(19, 39, 63, 0.1)",
         }}
       >
         <div className="relative flex items-center justify-center p-4">
@@ -914,8 +914,8 @@ function MiniAppScreenshot({ type }) {
                     <div className="text-sm font-semibold" style={{ color: "#FFFFFF" }}>
                       15 ноября, 14:00
                     </div>
-                    <div className="px-3 py-1 rounded-lg" style={{ background: "rgba(16, 185, 129, 0.2)" }}>
-                      <div className="text-xs font-semibold" style={{ color: "#10B981" }}>
+                    <div className="px-3 py-1 rounded-lg" style={{ background: "rgba(19, 39, 63, 0.1)" }}>
+                      <div className="text-xs font-semibold" style={{ color: "#13273F" }}>
                         Оплачено
                       </div>
                     </div>
@@ -1007,8 +1007,8 @@ function MiniAppScreenshot({ type }) {
                     <div className="text-sm font-semibold" style={{ color: "#FFFFFF" }}>
                       29 ноября, 14:00
                     </div>
-                    <div className="px-3 py-1 rounded-lg" style={{ background: "rgba(16, 185, 129, 0.2)" }}>
-                      <div className="text-xs font-semibold" style={{ color: "#10B981" }}>
+                    <div className="px-3 py-1 rounded-lg" style={{ background: "rgba(19, 39, 63, 0.1)" }}>
+                      <div className="text-xs font-semibold" style={{ color: "#13273F" }}>
                         Оплачено
                       </div>
                     </div>
@@ -1046,7 +1046,7 @@ function MiniAppScreenshot({ type }) {
         className="relative overflow-hidden rounded-3xl border"
         style={{
           background: "#FFFFFF",
-          borderColor: "rgba(19, 39, 63, 0.2)",
+          borderColor: "rgba(19, 39, 63, 0.1)",
         }}
       >
         <div className="relative flex items-center justify-center p-4">
@@ -1058,7 +1058,7 @@ function MiniAppScreenshot({ type }) {
                 placeholder="Поиск по имени или дате..."
                 className="w-full px-4 py-2.5 pl-10 rounded-xl border text-sm"
                 style={{
-                  borderColor: "rgba(19, 39, 63, 0.2)",
+                  borderColor: "rgba(19, 39, 63, 0.1)",
                   background: "#FFFFFF",
                   color: "#13273F",
                 }}
@@ -1083,7 +1083,7 @@ function MiniAppScreenshot({ type }) {
               <button
                 className="px-3 py-1.5 rounded-lg border text-xs font-medium"
                 style={{
-                  borderColor: "rgba(19, 39, 63, 0.2)",
+                  borderColor: "rgba(19, 39, 63, 0.1)",
                   background: "#13273F",
                   color: "#FFFFFF",
                 }}
@@ -1093,7 +1093,7 @@ function MiniAppScreenshot({ type }) {
               <button
                 className="px-3 py-1.5 rounded-lg border text-xs font-medium"
                 style={{
-                  borderColor: "rgba(19, 39, 63, 0.2)",
+                  borderColor: "rgba(19, 39, 63, 0.1)",
                   background: "#FFFFFF",
                   color: "rgba(19, 39, 63, 0.7)",
                 }}
@@ -1103,7 +1103,7 @@ function MiniAppScreenshot({ type }) {
               <button
                 className="px-3 py-1.5 rounded-lg border text-xs font-medium"
                 style={{
-                  borderColor: "rgba(19, 39, 63, 0.2)",
+                  borderColor: "rgba(19, 39, 63, 0.1)",
                   background: "#FFFFFF",
                   color: "rgba(19, 39, 63, 0.7)",
                 }}
@@ -1115,13 +1115,13 @@ function MiniAppScreenshot({ type }) {
             {/* Список консультаций */}
             <div className="space-y-3 max-h-[400px] overflow-y-auto">
               {/* Консультация 1 */}
-              <div className="border p-4 rounded-2xl" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(19, 39, 63, 0.05)" }}>
+              <div className="border p-4 rounded-2xl" style={{ borderColor: "rgba(19, 39, 63, 0.1)", background: "rgba(19, 39, 63, 0.05)" }}>
                 <div className="flex items-center justify-between mb-2">
                   <div className="text-sm font-semibold" style={{ color: "#13273F" }}>
                     15 ноября, 14:00
                   </div>
-                  <div className="px-3 py-1 rounded-lg" style={{ background: "rgba(16, 185, 129, 0.1)" }}>
-                    <div className="text-xs font-semibold" style={{ color: "#10B981" }}>
+                  <div className="px-3 py-1 rounded-lg" style={{ background: "rgba(19, 39, 63, 0.1)" }}>
+                    <div className="text-xs font-semibold" style={{ color: "#13273F" }}>
                       Проведено
                     </div>
                   </div>
@@ -1141,13 +1141,13 @@ function MiniAppScreenshot({ type }) {
               </div>
 
               {/* Консультация 2 */}
-              <div className="border p-4 rounded-2xl" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(19, 39, 63, 0.05)" }}>
+              <div className="border p-4 rounded-2xl" style={{ borderColor: "rgba(19, 39, 63, 0.1)", background: "rgba(19, 39, 63, 0.05)" }}>
                 <div className="flex items-center justify-between mb-2">
                   <div className="text-sm font-semibold" style={{ color: "#13273F" }}>
                     8 ноября, 16:00
                   </div>
-                  <div className="px-3 py-1 rounded-lg" style={{ background: "rgba(16, 185, 129, 0.1)" }}>
-                    <div className="text-xs font-semibold" style={{ color: "#10B981" }}>
+                  <div className="px-3 py-1 rounded-lg" style={{ background: "rgba(19, 39, 63, 0.1)" }}>
+                    <div className="text-xs font-semibold" style={{ color: "#13273F" }}>
                       Проведено
                     </div>
                   </div>
@@ -1167,13 +1167,13 @@ function MiniAppScreenshot({ type }) {
               </div>
 
               {/* Консультация 3 */}
-              <div className="border p-4 rounded-2xl" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(19, 39, 63, 0.05)" }}>
+              <div className="border p-4 rounded-2xl" style={{ borderColor: "rgba(19, 39, 63, 0.1)", background: "rgba(19, 39, 63, 0.05)" }}>
                 <div className="flex items-center justify-between mb-2">
                   <div className="text-sm font-semibold" style={{ color: "#13273F" }}>
                     1 ноября, 14:00
                   </div>
-                  <div className="px-3 py-1 rounded-lg" style={{ background: "rgba(16, 185, 129, 0.1)" }}>
-                    <div className="text-xs font-semibold" style={{ color: "#10B981" }}>
+                  <div className="px-3 py-1 rounded-lg" style={{ background: "rgba(19, 39, 63, 0.1)" }}>
+                    <div className="text-xs font-semibold" style={{ color: "#13273F" }}>
                       Проведено
                     </div>
                   </div>
@@ -1193,13 +1193,13 @@ function MiniAppScreenshot({ type }) {
               </div>
 
               {/* Консультация 4 */}
-              <div className="border p-4 rounded-2xl" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(19, 39, 63, 0.05)" }}>
+              <div className="border p-4 rounded-2xl" style={{ borderColor: "rgba(19, 39, 63, 0.1)", background: "rgba(19, 39, 63, 0.05)" }}>
                 <div className="flex items-center justify-between mb-2">
                   <div className="text-sm font-semibold" style={{ color: "#13273F" }}>
                     25 октября, 16:00
                   </div>
-                  <div className="px-3 py-1 rounded-lg" style={{ background: "rgba(16, 185, 129, 0.1)" }}>
-                    <div className="text-xs font-semibold" style={{ color: "#10B981" }}>
+                  <div className="px-3 py-1 rounded-lg" style={{ background: "rgba(19, 39, 63, 0.1)" }}>
+                    <div className="text-xs font-semibold" style={{ color: "#13273F" }}>
                       Проведено
                     </div>
                   </div>
@@ -1232,13 +1232,13 @@ function FilesAndFeedback() {
       className="relative overflow-hidden rounded-3xl border"
       style={{
         background: "#FFFFFF",
-        borderColor: "rgba(19, 39, 63, 0.2)",
+        borderColor: "rgba(19, 39, 63, 0.1)",
       }}
     >
       <div className="relative flex items-center justify-center p-4">
         <div className="w-full max-w-2xl space-y-4">
           {/* Консультация */}
-          <div className="border p-4 rounded-2xl" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(19, 39, 63, 0.03)" }}>
+          <div className="border p-4 rounded-2xl" style={{ borderColor: "rgba(19, 39, 63, 0.1)", background: "rgba(19, 39, 63, 0.03)" }}>
             <div className="mb-3">
               <div className="text-sm font-semibold mb-1" style={{ color: "#13273F" }}>
                 15 ноября, 14:00
@@ -1275,7 +1275,7 @@ function FilesAndFeedback() {
                   Прикрепленные файлы
                 </div>
                 <div className="space-y-2">
-                  <button className="w-full border p-2 rounded-xl flex items-center justify-center gap-2 transition-all hover:opacity-70" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "#FFFFFF" }}>
+                  <button className="w-full border p-2 rounded-xl flex items-center justify-center gap-2 transition-all hover:opacity-70" style={{ borderColor: "rgba(19, 39, 63, 0.1)", background: "#FFFFFF" }}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(19, 39, 63, 0.6)" strokeWidth="2">
                       <line x1="12" y1="5" x2="12" y2="19"></line>
                       <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -1284,7 +1284,7 @@ function FilesAndFeedback() {
                       Прикрепить файл
                     </div>
                   </button>
-                  <div className="border p-2 rounded-xl flex items-center justify-between gap-2" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(19, 39, 63, 0.02)" }}>
+                  <div className="border p-2 rounded-xl flex items-center justify-between gap-2" style={{ borderColor: "rgba(19, 39, 63, 0.1)", background: "rgba(19, 39, 63, 0.02)" }}>
                     <div>
                       <div className="text-xs font-semibold" style={{ color: "#13273F" }}>
                         Заметки_сессии.pdf
@@ -1293,7 +1293,7 @@ function FilesAndFeedback() {
                         245 КБ
                       </div>
                     </div>
-                    <button className="w-6 h-6 rounded-lg border flex items-center justify-center" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(19, 39, 63, 0.04)", color: "rgba(19, 39, 63, 0.7)" }}>
+                    <button className="w-6 h-6 rounded-lg border flex items-center justify-center" style={{ borderColor: "rgba(19, 39, 63, 0.1)", background: "rgba(19, 39, 63, 0.04)", color: "rgba(19, 39, 63, 0.7)" }}>
                       ×
                     </button>
                   </div>
@@ -1305,7 +1305,7 @@ function FilesAndFeedback() {
                 <div className="text-xs font-semibold mb-2" style={{ color: "#13273F" }}>
                   Домашнее задание
                 </div>
-                <div className="border p-3 rounded-xl" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(19, 39, 63, 0.02)" }}>
+                <div className="border p-3 rounded-xl" style={{ borderColor: "rgba(19, 39, 63, 0.1)", background: "rgba(19, 39, 63, 0.02)" }}>
                   <textarea
                     className="w-full resize-none text-xs"
                     placeholder="Напишите домашнее задание для клиента..."
@@ -1326,7 +1326,7 @@ function FilesAndFeedback() {
                   <div className="text-xs font-semibold mb-2" style={{ color: "#13273F" }}>
                     Дедлайн
                   </div>
-                  <button className="w-full px-3 py-2 rounded-lg text-xs font-semibold border transition-all hover:opacity-70" style={{ borderColor: "rgba(19, 39, 63, 0.2)", color: "#13273F", background: "#FFFFFF" }}>
+                  <button className="w-full px-3 py-2 rounded-lg text-xs font-semibold border transition-all hover:opacity-70" style={{ borderColor: "rgba(19, 39, 63, 0.1)", color: "#13273F", background: "#FFFFFF" }}>
                     Добавить дедлайн
                   </button>
                 </div>
@@ -1687,9 +1687,9 @@ export default function PsychologistLandingUpmini() {
                   <span 
                     className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs md:text-sm border"
                     style={{
-                      background: "rgba(107, 126, 61, 0.15)",
-                      borderColor: "rgba(107, 126, 61, 0.3)",
-                      color: "rgba(19, 39, 63, 0.7)",
+                      background: "rgba(19, 39, 63, 0.1)",
+                      borderColor: "rgba(19, 39, 63, 0.1)",
+                      color: "#13273F",
                       backdropFilter: "blur(14px)",
                       WebkitBackdropFilter: "blur(14px)",
                     }}
@@ -1922,7 +1922,7 @@ export default function PsychologistLandingUpmini() {
                                 >
                                   <div className="flex items-center justify-between mb-0.5">
                                     <div className="text-[7px] font-semibold" style={{ color: "rgba(255,255,255,0.6)" }}>15 янв, 14:00</div>
-                                    <div className="text-[7px] px-0.5 py-0.5" style={{ borderRadius: "0.75rem", background: "rgba(16, 185, 129, 0.2)", color: "#10B981" }}>Оплачено</div>
+                                    <div className="text-[7px] px-0.5 py-0.5" style={{ borderRadius: "0.75rem", background: "rgba(19, 39, 63, 0.1)", color: "#13273F" }}>Оплачено</div>
                                   </div>
                                   <div className="flex flex-col items-center text-center mb-1">
                                     <div className="h-6 w-6 rounded-full border mb-0.5 shrink-0" style={{ borderColor: "rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.1)" }} />
@@ -1965,14 +1965,14 @@ export default function PsychologistLandingUpmini() {
                                         <div className="text-[8px] font-medium" style={{ color: "#FFFFFF" }}>10 янв, 14:00</div>
                                         <div className="text-[7px]" style={{ color: "rgba(255,255,255,0.6)" }}>Консультация</div>
                                       </div>
-                                      <div className="text-[7px] px-0.5 py-0.5" style={{ borderRadius: "0.75rem", background: "rgba(16, 185, 129, 0.2)", color: "#10B981" }}>Оплачено</div>
+                                      <div className="text-[7px] px-0.5 py-0.5" style={{ borderRadius: "0.75rem", background: "rgba(19, 39, 63, 0.1)", color: "#13273F" }}>Оплачено</div>
                                     </div>
                                     <div className="flex items-center justify-between py-0.5" style={{ borderColor: "rgba(255,255,255,0.1)" }}>
                                       <div>
                                         <div className="text-[8px] font-medium" style={{ color: "#FFFFFF" }}>5 янв, 10:00</div>
                                         <div className="text-[7px]" style={{ color: "rgba(255,255,255,0.6)" }}>Консультация</div>
                                       </div>
-                                      <div className="text-[7px] px-0.5 py-0.5" style={{ borderRadius: "0.75rem", background: "rgba(16, 185, 129, 0.2)", color: "#10B981" }}>Оплачено</div>
+                                      <div className="text-[7px] px-0.5 py-0.5" style={{ borderRadius: "0.75rem", background: "rgba(19, 39, 63, 0.1)", color: "#13273F" }}>Оплачено</div>
                                     </div>
                                   </div>
                                 </div>
@@ -2000,7 +2000,7 @@ export default function PsychologistLandingUpmini() {
                               <div className="text-[8px] mb-0.5" style={{ color: "rgba(255,255,255,0.6)" }}>Ссылка для подключения</div>
                               <div className="flex items-center gap-0.5">
                                 <input type="text" readOnly value={connectionLink} className="flex-1 px-1 py-0.5 text-[7px] bg-transparent border" style={{ borderRadius: "0.75rem", color: "#FFFFFF", borderColor: "rgba(255,255,255,0.12)" }} />
-                                <button onClick={handleCopyLink} className="p-0.5 border transition-all duration-200 flex items-center justify-center" style={{ borderRadius: "0.75rem", color: copied ? "#10B981" : "#FFFFFF", background: copied ? "rgba(16, 185, 129, 0.1)" : "#13273F", borderColor: copied ? "rgba(16, 185, 129, 0.3)" : "rgba(255,255,255,0.14)" }} title={copied ? "Скопировано!" : "Копировать"}>
+                                <button onClick={handleCopyLink} className="p-0.5 border transition-all duration-200 flex items-center justify-center" style={{ borderRadius: "0.75rem", color: copied ? "#13273F" : "#FFFFFF", background: copied ? "rgba(19, 39, 63, 0.1)" : "#13273F", borderColor: copied ? "rgba(19, 39, 63, 0.1)" : "rgba(255,255,255,0.14)" }} title={copied ? "Скопировано!" : "Копировать"}>
                                   {copied ? (
                                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                       <polyline points="20 6 9 17 4 12"></polyline>
@@ -2211,10 +2211,10 @@ export default function PsychologistLandingUpmini() {
                               </div>
                               <div className="flex flex-col gap-0.5 mb-0.5">
                                 <div className="flex gap-0.5">
-                                  <button className="flex-1 border py-0.5 px-0.5 text-[7px] font-medium" style={{ borderRadius: "1rem", borderColor: "rgba(19, 39, 63, 0.2)", background: "#13273F", color: "#FFFFFF" }}>Перенести</button>
-                                  <button className="flex-1 border py-0.5 px-0.5 text-[7px] font-medium" style={{ borderRadius: "1rem", borderColor: "rgba(19, 39, 63, 0.2)", background: "#13273F", color: "#FFFFFF" }}>Отмена</button>
+                                  <button className="flex-1 border py-0.5 px-0.5 text-[7px] font-medium" style={{ borderRadius: "1rem", borderColor: "rgba(19, 39, 63, 0.1)", background: "#13273F", color: "#FFFFFF" }}>Перенести</button>
+                                  <button className="flex-1 border py-0.5 px-0.5 text-[7px] font-medium" style={{ borderRadius: "1rem", borderColor: "rgba(19, 39, 63, 0.1)", background: "#13273F", color: "#FFFFFF" }}>Отмена</button>
                                 </div>
-                                <button className="w-full border py-0.5 px-0.5 text-[7px] font-medium" style={{ borderRadius: "1rem", borderColor: "rgba(19, 39, 63, 0.2)", background: "#13273F", color: "#FFFFFF" }}>Написать специалисту</button>
+                                <button className="w-full border py-0.5 px-0.5 text-[7px] font-medium" style={{ borderRadius: "1rem", borderColor: "rgba(19, 39, 63, 0.1)", background: "#13273F", color: "#FFFFFF" }}>Написать специалисту</button>
                               </div>
                               <div className="flex items-center gap-0.5">
                                 <input type="text" readOnly value="https://meet.example.com/abc123" className="flex-1 px-1 py-0.5 text-[7px]" style={{ borderRadius: "1rem", color: "rgba(0, 0, 0, 0.8)", border: "1px solid rgba(0, 0, 0, 0.2)", background: "#F8F9FA", outline: "none" }} />
@@ -2653,8 +2653,8 @@ export default function PsychologistLandingUpmini() {
                                         </div>
                                         <div className="text-[9px] px-1 py-0.5" style={{ 
                                           borderRadius: "0.375rem",
-                                          background: "rgba(16, 185, 129, 0.2)",
-                                          color: "#10B981"
+                                          background: "rgba(19, 39, 63, 0.1)",
+                                          color: "#13273F"
                                         }}>
                                           Оплачено
                                         </div>
@@ -2740,8 +2740,8 @@ export default function PsychologistLandingUpmini() {
                                           </div>
                                           <div className="text-[9px] px-1.5 py-0.5" style={{ 
                                             borderRadius: "0.75rem",
-                                            background: "rgba(16, 185, 129, 0.2)",
-                                            color: "#10B981"
+                                            background: "rgba(19, 39, 63, 0.1)",
+                                            color: "#13273F"
                                           }}>
                                             Оплачено
                                           </div>
@@ -2757,8 +2757,8 @@ export default function PsychologistLandingUpmini() {
                                           </div>
                                           <div className="text-[9px] px-1.5 py-0.5" style={{ 
                                             borderRadius: "0.75rem",
-                                            background: "rgba(16, 185, 129, 0.2)",
-                                            color: "#10B981"
+                                            background: "rgba(19, 39, 63, 0.1)",
+                                            color: "#13273F"
                                           }}>
                                             Оплачено
                                           </div>
@@ -2856,9 +2856,9 @@ export default function PsychologistLandingUpmini() {
                                   className="p-1.5 border transition-all duration-200 flex items-center justify-center"
                                   style={{
                                     borderRadius: "1rem",
-                                    color: copied ? "#10B981" : "#FFFFFF",
-                                    background: copied ? "rgba(16, 185, 129, 0.1)" : "#13273F",
-                                    borderColor: copied ? "rgba(16, 185, 129, 0.3)" : "rgba(255,255,255,0.14)",
+                                    color: copied ? "#13273F" : "#FFFFFF",
+                                    background: copied ? "rgba(19, 39, 63, 0.1)" : "#13273F",
+                                    borderColor: copied ? "rgba(19, 39, 63, 0.1)" : "rgba(255,255,255,0.14)",
                                   }}
                                   title={copied ? "Скопировано!" : "Копировать"}
                                 >
@@ -3190,7 +3190,7 @@ export default function PsychologistLandingUpmini() {
                                     className="flex-1 border py-1 px-1.5 text-[9px] font-medium transition-all duration-200 hover:opacity-90"
                                     style={{
                                       borderRadius: "1rem",
-                                      borderColor: "rgba(19, 39, 63, 0.2)",
+                                      borderColor: "rgba(19, 39, 63, 0.1)",
                                       background: "#13273F",
                                       color: "#FFFFFF",
                                     }}
@@ -3201,7 +3201,7 @@ export default function PsychologistLandingUpmini() {
                                     className="flex-1 border py-1 px-1.5 text-[9px] font-medium transition-all duration-200 hover:opacity-90"
                                     style={{
                                       borderRadius: "1rem",
-                                      borderColor: "rgba(19, 39, 63, 0.2)",
+                                      borderColor: "rgba(19, 39, 63, 0.1)",
                                       background: "#13273F",
                                       color: "#FFFFFF",
                                     }}
@@ -3213,7 +3213,7 @@ export default function PsychologistLandingUpmini() {
                                   className="w-full border py-1 px-1.5 text-[9px] font-medium transition-all duration-200 hover:opacity-90"
                                   style={{
                                     borderRadius: "1rem",
-                                    borderColor: "rgba(19, 39, 63, 0.2)",
+                                    borderColor: "rgba(19, 39, 63, 0.1)",
                                     background: "#13273F",
                                     color: "#FFFFFF",
                                   }}
@@ -3359,8 +3359,8 @@ export default function PsychologistLandingUpmini() {
                     )}
                     style={{
                       background: "linear-gradient(rgba(19, 39, 63, 0.15), rgba(19, 39, 63, 0.1))",
-                      borderColor: "rgba(19, 39, 63, 0.2)",
-                      boxShadow: "rgba(19, 39, 63, 0.2) 0px 28px 90px",
+                      borderColor: "rgba(19, 39, 63, 0.1)",
+                      boxShadow: "rgba(19, 39, 63, 0.1) 0px 28px 90px",
                       backdropFilter: "blur(18px)",
                       WebkitBackdropFilter: "blur(18px)",
                     }}
@@ -3488,17 +3488,17 @@ export default function PsychologistLandingUpmini() {
                       : isFiles
                       ? "#4E0000"
                       : `linear-gradient(180deg, ${PALETTE.panel2}, ${PALETTE.panel})`,
-                    borderColor: isBooking ? "rgba(19, 39, 63, 0.2)" : isReminders ? "rgba(19, 39, 63, 0.2)" : isCommunication ? "rgba(19, 39, 63, 0.2)" : isPayment ? "rgba(19, 39, 63, 0.2)" : isArchive ? "rgba(19, 39, 63, 0.2)" : isFiles ? "rgba(78, 0, 0, 0.6)" : PALETTE.stroke,
+                    borderColor: isBooking ? "rgba(19, 39, 63, 0.1)" : isReminders ? "rgba(19, 39, 63, 0.1)" : isCommunication ? "rgba(19, 39, 63, 0.1)" : isPayment ? "rgba(19, 39, 63, 0.1)" : isArchive ? "rgba(19, 39, 63, 0.1)" : isFiles ? "rgba(78, 0, 0, 0.6)" : PALETTE.stroke,
                     boxShadow: isBooking 
-                      ? "rgba(19, 39, 63, 0.2) 0px 28px 90px"
+                      ? "rgba(19, 39, 63, 0.1) 0px 28px 90px"
                       : isReminders
-                      ? "rgba(19, 39, 63, 0.2) 0px 28px 90px"
+                      ? "rgba(19, 39, 63, 0.1) 0px 28px 90px"
                       : isCommunication
-                      ? "rgba(19, 39, 63, 0.2) 0px 28px 90px"
+                      ? "rgba(19, 39, 63, 0.1) 0px 28px 90px"
                       : isPayment
-                      ? "rgba(19, 39, 63, 0.2) 0px 28px 90px"
+                      ? "rgba(19, 39, 63, 0.1) 0px 28px 90px"
                       : isArchive
-                      ? "rgba(19, 39, 63, 0.2) 0px 28px 90px"
+                      ? "rgba(19, 39, 63, 0.1) 0px 28px 90px"
                       : isFiles
                       ? "rgba(78, 0, 0, 0.3) 0px 18px 60px"
                       : `0 28px 90px ${PALETTE.shadow}`,
@@ -3565,7 +3565,7 @@ export default function PsychologistLandingUpmini() {
             {/* How it works - справа от последнего элемента на ПК */}
             <div className="lg:col-span-8 hidden lg:flex flex-col">
               <div className="mb-3">
-                <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs md:text-sm border" style={{ background: "rgba(107, 126, 61, 0.15)", borderColor: "rgba(107, 126, 61, 0.3)", color: "rgba(19, 39, 63, 0.7)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)" }}>
+                <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs md:text-sm border" style={{ background: "rgba(19, 39, 63, 0.1)", borderColor: "rgba(19, 39, 63, 0.1)", color: "#13273F", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)" }}>
                   Старт
                 </span>
               </div>
@@ -3721,8 +3721,8 @@ export default function PsychologistLandingUpmini() {
                   className="relative overflow-hidden rounded-3xl border shadow-[0_24px_80px_rgba(0,0,0,0.45)] p-5 md:p-7"
                   style={{
                     background: "rgb(19, 39, 63)",
-                    borderColor: "rgba(19, 39, 63, 0.2)",
-                    boxShadow: "rgba(19, 39, 63, 0.2) 0px 28px 90px",
+                    borderColor: "rgba(19, 39, 63, 0.1)",
+                    boxShadow: "rgba(19, 39, 63, 0.1) 0px 28px 90px",
                     backdropFilter: "blur(18px)",
                     WebkitBackdropFilter: "blur(18px)",
                   }}
@@ -3764,8 +3764,8 @@ export default function PsychologistLandingUpmini() {
                 className="relative overflow-hidden rounded-3xl border shadow-[0_24px_80px_rgba(0,0,0,0.45)] p-5 md:p-7"
                 style={{
                   background: "#FFFFFF",
-                  borderColor: "rgba(19, 39, 63, 0.2)",
-                  boxShadow: "rgba(19, 39, 63, 0.2) 0px 28px 90px",
+                  borderColor: "rgba(19, 39, 63, 0.1)",
+                  boxShadow: "rgba(19, 39, 63, 0.1) 0px 28px 90px",
                   backdropFilter: "blur(18px)",
                   WebkitBackdropFilter: "blur(18px)",
                 }}
@@ -3788,7 +3788,7 @@ export default function PsychologistLandingUpmini() {
                     <div
                       className="h-12 w-12 rounded-3xl border"
                       style={{
-                        borderColor: "rgba(19, 39, 63, 0.2)",
+                        borderColor: "rgba(19, 39, 63, 0.1)",
                         background: "rgba(19, 39, 63, 0.05)",
                       }}
                       aria-label="Фото психолога (плейсхолдер)"
@@ -3997,7 +3997,7 @@ export default function PsychologistLandingUpmini() {
 
                     {/* Форма для звонка */}
                     <div className="mt-4 pt-2 grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-4 items-stretch">
-                      <div className="w-full h-full rounded-2xl border p-5" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "#FFFFFF" }}>
+                      <div className="w-full h-full rounded-2xl border p-5" style={{ borderColor: "rgba(19, 39, 63, 0.1)", background: "#FFFFFF" }}>
                         <div className="text-sm font-semibold mb-4" style={{ color: "#13273F" }}>
                           Мы вам перезвоним
                         </div>
@@ -4007,7 +4007,7 @@ export default function PsychologistLandingUpmini() {
                             placeholder="+7 (___) ___-__-__"
                             className="w-full px-4 py-3 rounded-2xl border text-sm"
                             style={{
-                              borderColor: "rgba(19, 39, 63, 0.2)",
+                              borderColor: "rgba(19, 39, 63, 0.1)",
                               background: "#FFFFFF",
                               color: "#13273F",
                               outline: "none",
@@ -4030,7 +4030,7 @@ export default function PsychologistLandingUpmini() {
                             style={{
                               color: "#FFFFFF",
                               background: "#13273F",
-                              borderColor: "rgba(19, 39, 63, 0.2)",
+                              borderColor: "rgba(19, 39, 63, 0.1)",
                               boxShadow: "rgba(19, 39, 63, 0.3) 0px 18px 60px",
                             }}
                           >
@@ -4039,7 +4039,7 @@ export default function PsychologistLandingUpmini() {
                         </div>
                       </div>
 
-                      <div className="w-full h-full rounded-2xl border p-5" style={{ borderColor: "rgba(19, 39, 63, 0.2)", background: "rgba(255, 255, 255, 0.75)" }}>
+                      <div className="w-full h-full rounded-2xl border p-5" style={{ borderColor: "rgba(19, 39, 63, 0.1)", background: "rgba(255, 255, 255, 0.75)" }}>
                         <div className="text-sm font-semibold mb-4" style={{ color: "#13273F" }}>
                           Как мы помогаем бизнесу
                         </div>
