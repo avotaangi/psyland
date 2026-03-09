@@ -3849,7 +3849,13 @@ export default function PsychologistLandingUpmini() {
             <div className="lg:col-span-5">
               <SectionTitle
                 kicker="Тариф"
-                title="14 дней бесплатно, затем 1 900 ₽/мес"
+                title={
+                  <>
+                    <span className="whitespace-nowrap">14 дней бесплатно,</span>
+                    <br />
+                    <span className="whitespace-nowrap">затем 1 900 ₽/мес</span>
+                  </>
+                }
                 desc="Полный доступ ко всем функциям. Без ограничений. Стоимость меньше 1 вашей консультации."
               />
             </div>
